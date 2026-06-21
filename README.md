@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manarix Solutions — Landing Site
 
-## Getting Started
+Marketing website for **Manarix Solutions**, a FinTech & Enterprise Software Engineering firm serving banks, fintechs, startups, and enterprises across Africa.
 
-First, run the development server:
+**Live URL:** [manarix.com](https://manarix.com) (configure via `NEXT_PUBLIC_SITE_URL`)
+
+---
+
+## Stack
+
+| Layer     | Technology                                                                        |
+| --------- | --------------------------------------------------------------------------------- |
+| Framework | [Next.js 16](https://nextjs.org) (App Router)                                     |
+| UI        | React 19, Tailwind CSS 4                                                          |
+| i18n      | [next-intl](https://next-intl.dev) — English & French                             |
+| Theming   | [next-themes](https://github.com/pacocoursey/next-themes) — light / dark / system |
+| Motion    | Framer Motion                                                                     |
+| Icons     | Lucide React                                                                      |
+| Email     | [Resend](https://resend.com) (optional, contact form)                             |
+| Language  | TypeScript                                                                        |
+
+---
+
+## Quick start
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment template and fill in values
+cp .env.example .env.local
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The default locale is English; French is available at `/fr`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                                |
+| --------------- | ------------------------------------------ |
+| `npm run dev`   | Development server with hot reload         |
+| `npm run build` | Production build (SSG + static generation) |
+| `npm run start` | Serve production build locally             |
+| `npm run lint`  | ESLint (Next.js config)                    |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [`.env.example`](./.env.example).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable                   | Required    | Description                                               |
+| -------------------------- | ----------- | --------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`     | Recommended | Canonical site URL (sitemap, OG, JSON-LD)                 |
+| `NEXT_PUBLIC_CALENDLY_URL` | Optional    | Calendly link in contact section                          |
+| `RESEND_API_KEY`           | Optional    | Enables contact form email delivery                       |
+| `CONTACT_TO_EMAIL`         | Optional    | Inbox for form submissions (default: `hello@manarix.com`) |
+| `CONTACT_FROM_EMAIL`       | Optional    | Sender address for Resend                                 |
 
-## Deploy on Vercel
+Without `RESEND_API_KEY`, the contact form still validates and returns success; submissions are logged to the server console only.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+manarix-landing/
+├── messages/              # i18n copy (en.json, fr.json)
+├── public/                # Static assets (logo, manifest, PWA)
+├── src/
+│   ├── app/
+│   │   ├── [locale]/      # All localized pages
+│   │   ├── actions/       # Server actions (contact form)
+│   │   ├── icon.tsx       # Favicon (dynamic OG image)
+│   │   ├── opengraph-image.tsx
+│   │   ├── sitemap.ts
+│   │   └── robots.ts
+│   ├── components/
+│   │   ├── layout/        # Navbar, footer, page shell
+│   │   ├── pages/         # Reusable inner-page blocks
+│   │   ├── sections/      # Homepage & marketing sections
+│   │   ├── seo/           # JSON-LD structured data
+│   │   ├── ui/            # Design system primitives
+│   │   └── visual/        # Hero / platform illustrations
+│   ├── hooks/
+│   ├── i18n/              # next-intl routing & navigation
+│   ├── lib/               # Site config, constants, validation
+│   └── proxy.ts           # Locale middleware (next-intl)
+└── docs/                  # Extended documentation
+```
+
+---
+
+## Routes
+
+| Path               | Description                                                   |
+| ------------------ | ------------------------------------------------------------- |
+| `/`                | Homepage (all marketing sections)                             |
+| `/services`        | Services hub                                                  |
+| `/services/[slug]` | Service detail (`fintech`, `enterprise`, `cloud`, `advisory`) |
+| `/work`            | Case studies hub                                              |
+| `/work/[slug]`     | Case study detail                                             |
+| `/about`           | About page                                                    |
+| `/privacy`         | Privacy policy                                                |
+| `/fr/...`          | French equivalents (`localePrefix: as-needed`)                |
+
+Homepage sections (anchor IDs): `#industries`, `#clients`, `#contact`.
+
+---
+
+## Documentation
+
+| Guide                                          | Contents                                     |
+| ---------------------------------------------- | -------------------------------------------- |
+| [docs/architecture.md](./docs/architecture.md) | Routing, i18n, rendering, contact flow       |
+| [docs/content.md](./docs/content.md)           | Editing copy, adding services & case studies |
+| [docs/brand.md](./docs/brand.md)               | Logo assets, colors, typography              |
+
+---
+
+## Deployment
+
+Optimized for [Vercel](https://vercel.com):
+
+1. Connect the repository.
+2. Set environment variables from `.env.example`.
+3. Deploy — all pages are statically generated at build time.
+
+Build output includes localized sitemap (`/sitemap.xml`), robots.txt, dynamic favicon, and Open Graph image.
+
+---
+
+## License
+
+Private — © Manarix Solutions. All rights reserved.
