@@ -1,0 +1,681 @@
+{
+  "metadata": {
+    "title": "Manarix Solutions | Engineering Africa's Digital Future",
+    "description": "FinTech & Enterprise Software Engineering firm helping banks, fintechs, startups, and enterprises build scalable digital platforms, payment systems, and cloud-native applications across Africa.",
+    "tagline": "Engineering Africa's Digital Future"
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "bookConsultation": "Book a Consultation",
+    "scheduleDiscoveryCall": "Schedule a Discovery Call",
+    "exploreServices": "Explore Our Services",
+    "backToTop": "Back to top",
+    "viewCapability": "View capability",
+    "emailUs": "Email Us Directly",
+    "scheduleCall": "Schedule a Call",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "email": "Email",
+    "scheduling": "Scheduling",
+    "bookOnCalendly": "Book on Calendly",
+    "scheduleOnCalendly": "Schedule directly on Calendly",
+    "rightsReserved": "All rights reserved.",
+    "submitting": "Submitting...",
+    "finTechEnterprise": "FinTech & Enterprise Software Engineering"
+  },
+  "nav": {
+    "services": "Services",
+    "industries": "Industries",
+    "about": "About",
+    "clients": "Clients",
+    "contact": "Contact",
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "fr": "French"
+  },
+  "theme": {
+    "label": "Color theme",
+    "light": "Light theme",
+    "system": "System theme",
+    "dark": "Dark theme"
+  },
+  "hero": {
+    "headlineLine1": "Engineering Africa's",
+    "headlineLine2": "Digital Future",
+    "subheadline": "We design, build and modernize digital platforms, payment systems and enterprise software that power business growth across Africa.",
+    "statYears": "Years building",
+    "statPlatforms": "Platforms delivered",
+    "statFocus": "Enterprise focus",
+    "statUptime": "Platform uptime",
+    "statSecurity": "Security standard",
+    "statSecurityValue": "Bank-grade",
+    "statReach": "Regional reach",
+    "statReachValue": "Pan-African",
+    "uptime": "Uptime",
+    "security": "Security",
+    "enterprise": "Enterprise"
+  },
+  "marquee": {
+    "label": "Technologies and industries",
+    "items": [
+      "FinTech",
+      "Banking",
+      "Payments",
+      "Cloud Native",
+      "Enterprise SaaS",
+      "Mobile Money",
+      "API Platforms",
+      "Digital Transformation",
+      "Microservices",
+      "DevOps",
+      "AWS",
+      "Legacy Modernization"
+    ]
+  },
+  "trust": {
+    "eyebrow": "Why Us",
+    "title": "Trusted Expertise for Mission-Critical Systems",
+    "metrics": {
+      "experience": {
+        "value": "4+",
+        "label": "Years Experience",
+        "description": "Building enterprise-grade systems across Africa."
+      },
+      "platforms": {
+        "value": "20+",
+        "label": "Enterprise Platforms Delivered",
+        "description": "Production systems for banks, fintechs, and SMEs."
+      },
+      "fintech": {
+        "value": "FinTech",
+        "label": "FinTech & Banking Expertise",
+        "description": "Payments, integrations, and digital finance."
+      },
+      "cloud": {
+        "value": "Cloud",
+        "label": "Scalable Cloud Architectures",
+        "description": "AWS-native, resilient, and growth-ready."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Our Expertise",
+    "description": "End-to-end engineering capabilities for organizations building mission-critical digital infrastructure.",
+    "items": {
+      "fintech": {
+        "title": "FinTech & Payment Solutions",
+        "description": "Design and integration of secure payment infrastructures and financial systems.",
+        "features": [
+          "Mobile Money Integration",
+          "Payment Gateways",
+          "Wallet Systems",
+          "Payment APIs"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise Software Engineering",
+        "description": "Custom software solutions designed for scale and performance.",
+        "features": [
+          "Business Applications",
+          "SaaS Platforms",
+          "APIs & Microservices",
+          "Legacy Modernization"
+        ]
+      },
+      "cloud": {
+        "title": "Cloud & Platform Engineering",
+        "description": "Cloud-native architectures optimized for reliability and growth.",
+        "features": ["AWS", "DevOps", "CI/CD", "Monitoring"]
+      },
+      "advisory": {
+        "title": "Technical Advisory",
+        "description": "Architecture guidance and strategic technology consulting.",
+        "features": [
+          "Software Architecture",
+          "Technical Audits",
+          "CTO Advisory",
+          "System Reviews"
+        ]
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "About Us",
+    "title": "Built for Growth. Engineered for Reliability.",
+    "description": "We combine strategic thinking with deep technical execution to deliver platforms that enterprises depend on.",
+    "pillars": {
+      "mindset": {
+        "title": "Enterprise Mindset",
+        "description": "We think beyond code and focus on business outcomes."
+      },
+      "expertise": {
+        "title": "FinTech Expertise",
+        "description": "Deep understanding of payments, integrations and digital finance."
+      },
+      "architecture": {
+        "title": "Scalable Architecture",
+        "description": "Solutions designed to evolve with your business."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "The People Behind Manarix",
+    "description": "A senior engineering collective combining deep FinTech expertise, enterprise discipline, and a shared commitment to building Africa's digital infrastructure.",
+    "linkedinLabel": "{name} on LinkedIn",
+    "members": {
+      "ceo": {
+        "initials": "AD",
+        "name": "Amadou Diallo",
+        "role": "Founder & CEO",
+        "bio": "Leads Manarix with a product-minded engineering vision, partnering with banks and fintechs to translate complex business goals into reliable digital platforms.",
+        "expertise": ["Strategy", "FinTech", "Partnerships"],
+        "location": "Dakar, Senegal",
+        "linkedin": "https://linkedin.com/in/amadou-diallo"
+      },
+      "cto": {
+        "initials": "FN",
+        "name": "Fatou Ndiaye",
+        "role": "Chief Technology Officer",
+        "bio": "Architects mission-critical systems with a focus on security, scalability, and long-term maintainability across payment and enterprise workloads.",
+        "expertise": ["Architecture", "Security", "Platform Design"],
+        "location": "Dakar, Senegal",
+        "linkedin": "https://linkedin.com/in/fatou-ndiaye"
+      },
+      "engineering": {
+        "initials": "IS",
+        "name": "Ibrahim Sow",
+        "role": "Head of Engineering",
+        "bio": "Drives engineering excellence through modern delivery practices, code quality standards, and high-performing cross-functional squads.",
+        "expertise": ["Engineering Leadership", "DevOps", "Agile Delivery"],
+        "location": "Dakar, Senegal",
+        "linkedin": "https://linkedin.com/in/ibrahim-sow"
+      },
+      "fintech": {
+        "initials": "AC",
+        "name": "Aïssata Camara",
+        "role": "Lead FinTech Architect",
+        "bio": "Specializes in payment gateway design, mobile money integrations, and regulatory-aware financial system architecture across West Africa.",
+        "expertise": ["Payments", "APIs", "Integrations"],
+        "location": "Abidjan, Côte d'Ivoire",
+        "linkedin": "https://linkedin.com/in/aissata-camara"
+      },
+      "cloud": {
+        "initials": "KM",
+        "name": "Kwame Mensah",
+        "role": "Cloud Platform Lead",
+        "bio": "Builds resilient AWS-native infrastructures with observability, automation, and cost efficiency at the core of every deployment.",
+        "expertise": ["AWS", "Kubernetes", "SRE"],
+        "location": "Accra, Ghana",
+        "linkedin": "https://linkedin.com/in/kwame-mensah"
+      },
+      "delivery": {
+        "initials": "MB",
+        "name": "Mariama Ba",
+        "role": "Client Delivery Lead",
+        "bio": "Ensures transparent communication, predictable delivery, and lasting client relationships from discovery through production support.",
+        "expertise": ["Delivery", "Client Success", "PMO"],
+        "location": "Dakar, Senegal",
+        "linkedin": "https://linkedin.com/in/mariama-ba"
+      }
+    },
+    "culture": {
+      "title": "Engineering with ownership, precision, and impact",
+      "description": "We operate as an extension of our clients' teams — combining local market insight with world-class engineering standards to deliver platforms built to last."
+    }
+  },
+  "industries": {
+    "eyebrow": "Sectors",
+    "title": "Industries We Serve",
+    "description": "Deep domain experience across regulated and high-growth sectors driving Africa's digital economy.",
+    "items": {
+      "fintech": {
+        "title": "FinTech",
+        "description": "Digital lending, wallets, and payment innovation."
+      },
+      "banking": {
+        "title": "Banking",
+        "description": "Core banking modernization and digital channels."
+      },
+      "insurance": {
+        "title": "Insurance",
+        "description": "Policy platforms and claims automation."
+      },
+      "retail": {
+        "title": "Retail",
+        "description": "Commerce platforms and omnichannel systems."
+      },
+      "logistics": {
+        "title": "Logistics",
+        "description": "Supply chain visibility and fleet operations."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Patient systems and health data platforms."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Our Approach",
+    "title": "How We Work",
+    "description": "A disciplined engineering process designed for clarity, velocity, and long-term success.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "Understand business goals and challenges."
+      },
+      "architect": {
+        "title": "Architect",
+        "description": "Design scalable solutions."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Develop with modern engineering practices."
+      },
+      "scale": {
+        "title": "Scale",
+        "description": "Optimize and support growth."
+      }
+    }
+  },
+  "caseStudies": {
+    "eyebrow": "Capabilities",
+    "title": "Selected Capabilities",
+    "description": "Representative engagements demonstrating our approach to complex, enterprise-grade engineering challenges.",
+    "items": {
+      "payment": {
+        "title": "Payment Platform",
+        "description": "Multi-provider payment integration architecture."
+      },
+      "operations": {
+        "title": "Enterprise Operations Platform",
+        "description": "Digital workflow automation and management."
+      },
+      "cloud": {
+        "title": "Cloud Modernization",
+        "description": "Migration of legacy applications to cloud-native infrastructure."
+      }
+    }
+  },
+  "mockups": {
+    "paymentConsole": "Payment Gateway Console",
+    "operationsDashboard": "Operations Dashboard",
+    "cloudInfra": "Cloud Infrastructure",
+    "volume": "Volume",
+    "successRate": "Success Rate",
+    "providers": "Providers",
+    "active": "Active",
+    "workflows": "Workflows",
+    "tasks": "Tasks",
+    "teams": "Teams",
+    "reports": "Reports",
+    "healthy": "Healthy"
+  },
+  "testimonials": {
+    "eyebrow": "Partnerships",
+    "title": "Focused on Long-Term Partnerships",
+    "description": "We measure success by the systems we build and the relationships we sustain.",
+    "items": {
+      "one": {
+        "quote": "Manarix delivered a payment integration architecture that reduced our time-to-market by months. Their technical depth and enterprise discipline set them apart.",
+        "author": "Director of Technology",
+        "company": "Regional Financial Services Group"
+      },
+      "two": {
+        "quote": "From architecture review to production deployment, the team demonstrated the kind of reliability we expect from mission-critical partners.",
+        "author": "Head of Digital Transformation",
+        "company": "Pan-African Enterprise"
+      },
+      "three": {
+        "quote": "They understood our regulatory constraints and built a platform that scales without compromising security or performance.",
+        "author": "CTO",
+        "company": "Emerging FinTech Startup"
+      }
+    }
+  },
+  "clients": {
+    "eyebrow": "Trusted By",
+    "title": "Companies That Trust Manarix",
+    "description": "From emerging fintechs to established enterprises, organizations across West and Central Africa rely on Manarix to engineer their most critical digital systems.",
+    "stats": {
+      "projects": {
+        "value": "20+",
+        "label": "Enterprise engagements"
+      },
+      "sectors": {
+        "value": "6",
+        "label": "Regulated industries"
+      },
+      "retention": {
+        "value": "95%",
+        "label": "Client retention"
+      }
+    },
+    "items": {
+      "teranga": {
+        "initials": "TP",
+        "name": "Teranga Pay",
+        "sector": "FinTech",
+        "engagement": "Payment gateway architecture and mobile money integration.",
+        "region": "West Africa"
+      },
+      "sahel": {
+        "initials": "SF",
+        "name": "Sahel Finance Group",
+        "sector": "Banking",
+        "engagement": "Digital banking platform and core system modernization.",
+        "region": "Sahel Region"
+      },
+      "atlas": {
+        "initials": "AD",
+        "name": "Atlas Digital Bank",
+        "sector": "Banking",
+        "engagement": "Cloud-native onboarding and API banking infrastructure.",
+        "region": "North & West Africa"
+      },
+      "kora": {
+        "initials": "KT",
+        "name": "Kora Technologies",
+        "sector": "Enterprise",
+        "engagement": "Enterprise operations platform and workflow automation.",
+        "region": "West Africa"
+      },
+      "baobab": {
+        "initials": "BS",
+        "name": "Baobab Systems",
+        "sector": "Insurance",
+        "engagement": "Policy management system and claims processing engine.",
+        "region": "Francophone Africa"
+      },
+      "mande": {
+        "initials": "ME",
+        "name": "Mande Enterprise",
+        "sector": "Logistics",
+        "engagement": "Fleet management platform and real-time tracking APIs.",
+        "region": "West Africa"
+      },
+      "horizon": {
+        "initials": "HF",
+        "name": "Horizon FinTech",
+        "sector": "FinTech",
+        "engagement": "Wallet infrastructure and multi-rail payment orchestration.",
+        "region": "Central Africa"
+      },
+      "nexus": {
+        "initials": "NP",
+        "name": "Nexus Payment Group",
+        "sector": "Payments",
+        "engagement": "Merchant acquiring platform and reconciliation system.",
+        "region": "Pan-African"
+      }
+    }
+  },
+  "cta": {
+    "badge": "Get in touch",
+    "title": "Let's Build Your Next",
+    "titleHighlight": "Digital Platform",
+    "description": "Whether you're launching a fintech product, modernizing an enterprise system, or scaling digital operations, Manarix Solutions can help."
+  },
+  "contact": {
+    "formTitle": "Start a conversation",
+    "fullName": "Full Name",
+    "workEmail": "Work Email",
+    "company": "Company",
+    "serviceInterest": "Service Interest",
+    "projectOverview": "Project Overview",
+    "namePlaceholder": "Jane Okonkwo",
+    "emailPlaceholder": "jane@company.com",
+    "companyPlaceholder": "Your organization",
+    "servicePlaceholder": "Select a service area",
+    "messagePlaceholder": "Tell us about your goals, timeline, and technical requirements...",
+    "responseTime": "We respond to all inquiries within one business day.",
+    "successTitle": "Inquiry Received",
+    "successMessage": "Thank you. Our team will review your inquiry and respond within one business day.",
+    "errorGeneric": "Something went wrong. Please email us directly or try again shortly.",
+    "services": {
+      "fintech": "FinTech & Payment Solutions",
+      "enterprise": "Enterprise Software Engineering",
+      "cloud": "Cloud & Platform Engineering",
+      "advisory": "Technical Advisory",
+      "other": "Other"
+    },
+    "validation": {
+      "formError": "Please fix the errors below.",
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid work email.",
+      "company": "Please enter your company name.",
+      "service": "Please select a service area.",
+      "message": "Please provide a brief project overview (20+ characters)."
+    }
+  },
+  "footer": {
+    "description": "FinTech & Enterprise Software Engineering.",
+    "homeLabel": "Manarix Solutions — back to top"
+  },
+  "logo": {
+    "manarix": "Manarix",
+    "solutions": "Solutions"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to homepage"
+  },
+  "seo": {
+    "serviceTypes": [
+      "FinTech Software Engineering",
+      "Enterprise Software Development",
+      "Cloud Platform Engineering",
+      "Technical Advisory"
+    ]
+  },
+  "pages": {
+    "common": {
+      "home": "Home",
+      "services": "Services",
+      "work": "Capabilities",
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "backToHome": "Back to homepage",
+      "viewAllServices": "View all services",
+      "viewAllWork": "View all capabilities",
+      "challenges": "Challenges we solve",
+      "deliverables": "What we deliver",
+      "technologies": "Technologies & tools",
+      "ourProcess": "Our approach",
+      "relatedCapabilities": "Related capabilities",
+      "relatedServices": "Related services",
+      "readyToStart": "Ready to get started?",
+      "ctaDescription": "Tell us about your project and our team will respond within one business day.",
+      "context": "Context",
+      "approach": "Approach",
+      "outcomes": "Outcomes"
+    },
+    "servicesHub": {
+      "metaTitle": "Our Services",
+      "metaDescription": "FinTech, enterprise software, cloud engineering, and technical advisory for organizations building mission-critical digital platforms across Africa.",
+      "title": "Engineering Services",
+      "description": "End-to-end capabilities to design, build, and scale the digital platforms your business depends on."
+    },
+    "serviceDetail": {
+      "fintech": {
+        "metaTitle": "FinTech & Payment Solutions",
+        "metaDescription": "Secure payment infrastructures, mobile money integrations, wallet systems, and payment APIs engineered for Africa's financial ecosystem.",
+        "headline": "FinTech & Payment Solutions",
+        "subheadline": "Design and integrate secure payment infrastructures that connect banks, telcos, merchants, and end users across multiple rails.",
+        "challenges": [
+          "Fragmented payment rails across markets and providers",
+          "Regulatory and compliance requirements for financial data",
+          "Legacy systems blocking fast product launches",
+          "Reconciliation and settlement at scale"
+        ],
+        "deliverables": [
+          "Payment gateway architecture and orchestration",
+          "Mobile money and card provider integrations",
+          "Wallet and ledger system design",
+          "Payment APIs and merchant onboarding flows"
+        ],
+        "technologies": ["REST & GraphQL APIs", "PostgreSQL", "AWS", "Redis", "PCI-aware patterns", "Event-driven architecture"]
+      },
+      "enterprise": {
+        "metaTitle": "Enterprise Software Engineering",
+        "metaDescription": "Custom business applications, SaaS platforms, APIs, microservices, and legacy modernization built for scale across Africa.",
+        "headline": "Enterprise Software Engineering",
+        "subheadline": "Custom software solutions designed for performance, maintainability, and long-term growth in regulated environments.",
+        "challenges": [
+          "Manual workflows slowing operations",
+          "Monolithic systems difficult to extend",
+          "Poor visibility across business units",
+          "Integration gaps between internal tools"
+        ],
+        "deliverables": [
+          "Business applications and internal platforms",
+          "SaaS products and multi-tenant architectures",
+          "APIs, microservices, and integration layers",
+          "Legacy modernization and phased migration"
+        ],
+        "technologies": ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "Docker", "CI/CD pipelines"]
+      },
+      "cloud": {
+        "metaTitle": "Cloud & Platform Engineering",
+        "metaDescription": "AWS-native architectures, DevOps, CI/CD, and observability for resilient, growth-ready cloud platforms.",
+        "headline": "Cloud & Platform Engineering",
+        "subheadline": "Cloud-native infrastructures optimized for reliability, security, and cost efficiency as your platform scales.",
+        "challenges": [
+          "Unpredictable uptime and incident response",
+          "Slow, manual deployment processes",
+          "Rising cloud costs without visibility",
+          "Security and access control gaps"
+        ],
+        "deliverables": [
+          "AWS architecture design and implementation",
+          "CI/CD pipelines and infrastructure as code",
+          "Monitoring, alerting, and SRE practices",
+          "Cloud migration and container orchestration"
+        ],
+        "technologies": ["AWS", "Terraform", "Docker", "Kubernetes", "GitHub Actions", "Datadog / CloudWatch"]
+      },
+      "advisory": {
+        "metaTitle": "Technical Advisory",
+        "metaDescription": "Architecture reviews, technical audits, CTO advisory, and system assessments for enterprise and fintech teams.",
+        "headline": "Technical Advisory",
+        "subheadline": "Strategic technology guidance to de-risk decisions, align engineering with business goals, and accelerate delivery.",
+        "challenges": [
+          "Uncertainty before major platform investments",
+          "Technical debt blocking roadmap execution",
+          "Architecture not keeping pace with growth",
+          "Need for independent expert assessment"
+        ],
+        "deliverables": [
+          "Software architecture and roadmap reviews",
+          "Technical audits and risk assessments",
+          "CTO and engineering leadership advisory",
+          "System design and vendor evaluation support"
+        ],
+        "technologies": ["Architecture diagrams", "Security reviews", "Performance analysis", "Team assessments", "Roadmap planning"]
+      }
+    },
+    "workHub": {
+      "metaTitle": "Selected Capabilities",
+      "metaDescription": "Representative engineering engagements demonstrating our approach to payment platforms, enterprise operations, and cloud modernization.",
+      "title": "Selected Capabilities",
+      "description": "How we approach complex, enterprise-grade engineering challenges — from architecture to production."
+    },
+    "workDetail": {
+      "payment-platform": {
+        "metaTitle": "Payment Platform Architecture",
+        "metaDescription": "Multi-provider payment integration architecture for fintechs and financial institutions across Africa.",
+        "headline": "Payment Platform",
+        "subheadline": "Multi-provider payment integration architecture connecting mobile money, cards, and bank transfers behind a unified API.",
+        "context": "A regional financial services group needed to launch digital payment products across multiple markets without rebuilding integrations for each provider.",
+        "approach": "We designed a provider-agnostic orchestration layer with idempotent transaction handling, webhook normalization, and a reconciliation engine — enabling new rails to be added in weeks, not months.",
+        "outcomes": [
+          "Unified API across 12+ payment providers",
+          "Reduced integration time-to-market by months",
+          "99.7%+ transaction success rate in production",
+          "Audit-ready logging and compliance hooks"
+        ],
+        "relatedService": "fintech"
+      },
+      "operations-platform": {
+        "metaTitle": "Enterprise Operations Platform",
+        "metaDescription": "Digital workflow automation and operations management platform for pan-African enterprises.",
+        "headline": "Enterprise Operations Platform",
+        "subheadline": "Digital workflow automation and management system replacing manual processes with traceable, scalable operations.",
+        "context": "A pan-African enterprise relied on spreadsheets and email chains to manage cross-team workflows, creating delays and compliance risk.",
+        "approach": "We built a modular operations platform with role-based access, configurable approval pipelines, document management, and real-time dashboards — integrated with existing ERP systems.",
+        "outcomes": [
+          "80% reduction in manual handoffs",
+          "End-to-end audit trail for compliance",
+          "Real-time visibility across 6 business units",
+          "Phased rollout without disrupting live operations"
+        ],
+        "relatedService": "enterprise"
+      },
+      "cloud-modernization": {
+        "metaTitle": "Cloud Modernization",
+        "metaDescription": "Migration of legacy applications to resilient, cloud-native AWS infrastructure with observability and automation.",
+        "headline": "Cloud Modernization",
+        "subheadline": "Migration of legacy applications to cloud-native infrastructure designed for resilience, observability, and growth.",
+        "context": "A growing fintech needed to move off aging on-premise infrastructure to meet uptime SLAs and support rapid user growth.",
+        "approach": "We executed a phased migration to AWS with containerized services, infrastructure as code, automated CI/CD, and comprehensive monitoring — minimizing downtime and de-risking each cutover.",
+        "outcomes": [
+          "99.9% uptime SLA achieved post-migration",
+          "Deploy frequency increased from monthly to daily",
+          "30% infrastructure cost optimization",
+          "Full observability across all production services"
+        ],
+        "relatedService": "cloud"
+      }
+    },
+    "about": {
+      "metaTitle": "About Manarix Solutions",
+      "metaDescription": "FinTech and enterprise software engineering team building Africa's digital infrastructure with ownership, precision, and impact.",
+      "title": "About Manarix",
+      "description": "We are a senior engineering collective partnering with banks, fintechs, and enterprises to build platforms that power Africa's digital economy.",
+      "missionTitle": "Our mission",
+      "mission": "To engineer reliable, scalable digital platforms that help African organizations compete globally — combining local market insight with world-class engineering discipline.",
+      "visionTitle": "Our vision",
+      "vision": "An Africa where every business, bank, and innovator has access to enterprise-grade technology built for their context, not imported without adaptation."
+    },
+    "privacy": {
+      "metaTitle": "Privacy Policy",
+      "metaDescription": "How Manarix Solutions collects, uses, and protects personal data submitted through our website and contact forms.",
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: June 2025",
+      "intro": "Manarix Solutions (\"we\", \"us\") respects your privacy. This policy explains how we handle personal information collected through manarix.com.",
+      "sections": {
+        "collect": {
+          "title": "Information we collect",
+          "body": "When you submit our contact form, we collect your name, work email, company name, service interest, and project overview. We may also collect standard technical data such as browser type and IP address through server logs."
+        },
+        "use": {
+          "title": "How we use your information",
+          "body": "We use your information solely to respond to inquiries, schedule consultations, and improve our services. We do not sell your personal data to third parties."
+        },
+        "retention": {
+          "title": "Data retention",
+          "body": "Contact inquiry data is retained for up to 24 months unless a business relationship is established, in which case data is retained as required for the engagement and applicable law."
+        },
+        "rights": {
+          "title": "Your rights",
+          "body": "You may request access, correction, or deletion of your personal data by contacting us at hello@manarix.com. We will respond within 30 days."
+        },
+        "security": {
+          "title": "Security",
+          "body": "We implement appropriate technical and organizational measures to protect your data, including encrypted transmission (HTTPS) and access controls on internal systems."
+        },
+        "contact": {
+          "title": "Contact",
+          "body": "For privacy-related questions, email us at hello@manarix.com."
+        }
+      }
+    }
+  }
+}
