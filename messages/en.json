@@ -172,7 +172,7 @@
     "members": {
       "ceo": {
         "initials": "AD",
-        "name": "Amadou Diallo",
+        "name": "Saifoulaye Diallo",
         "role": "Founder & CEO",
         "bio": "Leads Manarix with a product-minded engineering vision, partnering with banks and fintechs to translate complex business goals into reliable digital platforms.",
         "expertise": ["Strategy", "FinTech", "Partnerships"],
@@ -181,7 +181,7 @@
       },
       "cto": {
         "initials": "FN",
-        "name": "Fatou Ndiaye",
+        "name": "Souleymane Diallo",
         "role": "Chief Technology Officer",
         "bio": "Architects mission-critical systems with a focus on security, scalability, and long-term maintainability across payment and enterprise workloads.",
         "expertise": ["Architecture", "Security", "Platform Design"],
