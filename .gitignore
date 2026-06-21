@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Keep shared app modules (global gitignore may ignore lib/)
+!src/lib/
+!src/lib/**
