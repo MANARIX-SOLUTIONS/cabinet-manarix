@@ -771,9 +771,9 @@
     "members": {
       "founder": {
         "initials": "SD",
-        "name": "Saifoulaye Diallo",
+        "name": "Saïfoulaye Diallo",
         "role": "Founder, principal architect",
-        "bio": "Senior software engineer. Financial systems, backend platforms, critical APIs, distributed architectures. Designer and developer of Xaalis.",
+        "bio": "Senior software engineer. Financial systems, backend platforms, critical APIs, distributed architectures.",
         "expertise": [
           "Backend platforms",
           "Java / Spring",
@@ -782,7 +782,7 @@
           "Cloud"
         ],
         "location": "Dakar, Senegal",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/sayfoulaye-diallo/"
       },
       "partner": {
         "initials": "SD",
@@ -791,7 +791,7 @@
         "bio": "Partner at Manarix, based in Dakar. Works with the founder on project delivery.",
         "expertise": [],
         "location": "Dakar, Senegal",
-        "linkedin": ""
+        "linkedin": "https://www.linkedin.com/in/souleymanediallo2/"
       }
     }
   },
