@@ -1,9 +1,27 @@
 {
   "name": "Manarix Solutions",
   "short_name": "Manarix",
-  "description": "FinTech & Enterprise Software Engineering across Africa.",
+  "description": "FinTech Engineering & Consulting — payment infrastructure and backend systems.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8fafc",
-  "theme_color": "#2563eb"
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "icons": [
+    {
+      "src": "/logo-mark.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/logo-mark.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
 }

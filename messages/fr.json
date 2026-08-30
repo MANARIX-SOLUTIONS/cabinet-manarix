@@ -1,18 +1,35 @@
 {
   "metadata": {
-    "title": "Manarix Solutions | Construire l'avenir numérique de l'Afrique",
-    "description": "Cabinet d'ingénierie FinTech et logicielle enterprise aidant banques, fintechs, startups et grandes entreprises à concevoir des plateformes digitales, systèmes de paiement et applications cloud-native à travers l'Afrique.",
-    "tagline": "Construire l'avenir numérique de l'Afrique"
+    "title": "Manarix Solutions | Ingénierie FinTech et infrastructure de paiement",
+    "description": "Manarix Solutions aide fintechs, PSP et plateformes digitales à intégrer des paiements, moderniser des backends et construire des infrastructures greenfield.",
+    "tagline": "Ingénierie FinTech & Conseil"
   },
   "common": {
     "skipToContent": "Aller au contenu principal",
-    "bookConsultation": "Réserver une consultation",
-    "scheduleDiscoveryCall": "Planifier un appel découverte",
-    "exploreServices": "Découvrir nos services",
+    "bookConsultation": "Réserver un diagnostic →",
+    "bookDiscovery": "Réserver un diagnostic technique →",
+    "exploreExpertise": "Explorer notre expertise",
+    "discussOpportunity": "Discuter d'une opportunité →",
+    "viewEngineeringProfile": "Voir le profil technique",
+    "contactManarix": "Contacter Manarix",
+    "exploreAudit": "Explorer l'audit →",
+    "exploreSprint": "Explorer le sprint →",
+    "exploreModernization": "Explorer la modernisation →",
+    "exploreGreenfield": "Explorer le greenfield →",
+    "scheduleDiscoveryCall": "Diagnostic technique de 45 minutes",
+    "auditPlatform": "Demander un audit",
+    "talkToEngineer": "Parler à un architecte",
+    "proposePartnership": "Proposer une collaboration",
+    "exploreServices": "Voir nos missions",
+    "requestQuote": "Demander une proposition",
+    "quotePromise": "Proposition écrite sous 48 h, après un diagnostic technique de 45 minutes.",
+    "contactEmergency": "Nous joindre en urgence",
     "backToTop": "Retour en haut",
-    "viewCapability": "Voir la capacité",
+    "viewCapability": "Voir le projet",
     "emailUs": "Nous écrire directement",
     "scheduleCall": "Planifier un appel",
+    "whatsapp": "WhatsApp",
+    "whatsappUs": "Écrire sur WhatsApp",
     "navigation": "Navigation",
     "contact": "Contact",
     "email": "E-mail",
@@ -21,14 +38,19 @@
     "scheduleOnCalendly": "Planifier directement sur Calendly",
     "rightsReserved": "Tous droits réservés.",
     "submitting": "Envoi en cours...",
-    "finTechEnterprise": "Ingénierie FinTech & Enterprise"
+    "finTechEnterprise": "Ingénierie FinTech · Infrastructure de paiement"
   },
   "nav": {
+    "expertise": "Expertise",
     "services": "Services",
-    "industries": "Secteurs",
+    "approach": "Approche",
+    "caseStudies": "Études de cas",
+    "insights": "Insights",
     "about": "À propos",
-    "clients": "Clients",
     "contact": "Contact",
+    "offers": "Services",
+    "partners": "Partenaires",
+    "industries": "Secteurs",
     "mainNav": "Navigation principale",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu"
@@ -45,418 +67,894 @@
     "dark": "Thème sombre"
   },
   "hero": {
-    "headlineLine1": "Construire l'avenir",
-    "headlineLine2": "numérique de l'Afrique",
-    "subheadline": "Nous concevons, développons et modernisons des plateformes digitales, systèmes de paiement et logiciels enterprise qui accélèrent la croissance des entreprises à travers l'Afrique.",
-    "statYears": "Années d'expérience",
-    "statPlatforms": "Plateformes livrées",
-    "statFocus": "Focus enterprise",
-    "statUptime": "Disponibilité plateforme",
-    "statSecurity": "Standard de sécurité",
-    "statSecurityValue": "Niveau bancaire",
-    "statReach": "Couverture régionale",
-    "statReachValue": "Pan-africain",
-    "uptime": "Disponibilité",
-    "security": "Sécurité",
-    "enterprise": "Enterprise"
+    "eyebrow": "Ingénierie FinTech & Conseil",
+    "headlineLine1": "Nous concevons des systèmes financiers fiables.",
+    "headlineLine2": "Vous vous concentrez sur la croissance.",
+    "subheadline": "Manarix Solutions aide fintechs, PSP et plateformes digitales à intégrer des paiements, moderniser des backends en production et construire des infrastructures greenfield.",
+    "trustIntegration": "Intégration de paiement",
+    "trustModernization": "Modernisation backend",
+    "trustGreenfield": "Plateformes greenfield",
+    "trustRegion": "UEMOA · Afrique francophone",
+    "trustProcess": "Diagnostic 45 min · proposition 48 h",
+    "visualStatus": "Tous les systèmes opérationnels",
+    "visualScope": "Moniteur d'infrastructure de paiement",
+    "visualSuccessRate": "99,92 %",
+    "visualSuccessLabel": "Succès des transactions",
+    "visualVolume": "2,48 M",
+    "visualVolumeLabel": "Transactions",
+    "visualLatency": "120 ms",
+    "visualLatencyLabel": "Latence moy.",
+    "flowMobileMoney": "Mobile Money / PSP",
+    "flowPaymentApis": "APIs de paiement",
+    "flowOrchestration": "Orchestration de paiement",
+    "flowLedger": "Ledger / Réconciliation",
+    "flowSettlement": "Règlement / Réconciliation"
+  },
+  "trustBar": {
+    "railsLabel": "Rails et plateformes de paiement que nous intégrons",
+    "railsDisclaimer": "Expertise d'intégration — pas une liste de clients.",
+    "rails": [
+      "Wave",
+      "Orange Money",
+      "Free Money",
+      "PayDunya",
+      "InTouch",
+      "CinetPay",
+      "Stripe",
+      "Réseaux cartes",
+      "PI-SPI",
+      "APIs mobile money"
+    ],
+    "stats": {
+      "region": {
+        "value": "UEMOA",
+        "label": "Focus paiement régional"
+      },
+      "diagnostic": {
+        "value": "45 min",
+        "label": "Diagnostic technique"
+      },
+      "proposal": {
+        "value": "48 h",
+        "label": "Proposition écrite"
+      }
+    }
   },
   "marquee": {
-    "label": "Technologies et secteurs",
+    "label": "Technologies que nous livrons en production",
     "items": [
-      "FinTech",
-      "Banque",
-      "Paiements",
-      "Cloud Native",
-      "SaaS Enterprise",
-      "Mobile Money",
-      "Plateformes API",
-      "Transformation digitale",
-      "Microservices",
-      "DevOps",
+      "APIs",
+      "Kafka",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Kubernetes",
       "AWS",
-      "Modernisation legacy"
+      "OpenTelemetry",
+      "Java",
+      "Node.js"
     ]
   },
-  "trust": {
-    "eyebrow": "Pourquoi nous",
-    "title": "Expertise de confiance pour les systèmes critiques",
-    "metrics": {
-      "experience": {
-        "value": "4+",
-        "label": "Années d'expérience",
-        "description": "Construction de systèmes enterprise à travers l'Afrique."
+  "problem": {
+    "eyebrow": "Ce que nous résolvons",
+    "title": "Les systèmes financiers complexes exigent plus que du code.",
+    "description": "Nous combinons ingénierie logicielle, architecture et expertise métier financière pour résoudre les problèmes entre produit, technologie et infrastructure.",
+    "cards": {
+      "integration": {
+        "title": "Intégration de paiement",
+        "description": "Intégrer PSP, mobile money et rails de paiement avec idempotence, webhooks, retries et gestion d'état fiable.",
+        "tags": ["PSP", "Mobile Money", "Webhooks", "Multi-rails"]
       },
-      "platforms": {
-        "value": "20+",
-        "label": "Plateformes enterprise livrées",
-        "description": "Systèmes en production pour banques, fintechs et PME."
+      "modernization": {
+        "title": "Modernisation backend",
+        "description": "Moderniser des backends legacy en production sans big bang — montées de stack, APIs, événements et observabilité.",
+        "tags": ["Legacy", "APIs", "Event-driven", "Cloud-native"]
       },
-      "fintech": {
-        "value": "FinTech",
-        "label": "Expertise FinTech & Banque",
-        "description": "Paiements, intégrations et finance digitale."
-      },
-      "cloud": {
-        "value": "Cloud",
-        "label": "Architectures cloud évolutives",
-        "description": "AWS-native, résilientes et prêtes à scaler."
+      "greenfield": {
+        "title": "Plateformes greenfield",
+        "description": "Construire une infrastructure de paiement from scratch : orchestration, ledger, encaissement multi-rails et architecture prête pour la production.",
+        "tags": ["Orchestration", "Ledger", "Multi-rails", "Go-live"]
       }
     }
   },
   "services": {
-    "eyebrow": "Ce que nous faisons",
-    "title": "Notre expertise",
-    "description": "Capacités d'ingénierie de bout en bout pour les organisations construisant une infrastructure digitale critique.",
-    "items": {
-      "fintech": {
-        "title": "Solutions FinTech & Paiement",
-        "description": "Conception et intégration d'infrastructures de paiement et systèmes financiers sécurisés.",
-        "features": [
-          "Intégration Mobile Money",
-          "Passerelles de paiement",
-          "Systèmes de portefeuille",
-          "APIs de paiement"
-        ]
-      },
-      "enterprise": {
-        "title": "Ingénierie logicielle enterprise",
-        "description": "Solutions sur mesure conçues pour la performance et la montée en charge.",
-        "features": [
-          "Applications métier",
-          "Plateformes SaaS",
-          "APIs & Microservices",
-          "Modernisation legacy"
-        ]
-      },
-      "cloud": {
-        "title": "Cloud & Ingénierie de plateforme",
-        "description": "Architectures cloud-native optimisées pour la fiabilité et la croissance.",
-        "features": ["AWS", "DevOps", "CI/CD", "Monitoring"]
-      },
+    "eyebrow": "Services",
+    "title": "Trois types de mission. Un standard : production-grade.",
+    "description": "Intégration de paiement, modernisation backend et builds greenfield — cadrés pour l'impact. Un diagnostic technique de 45 minutes, une proposition écrite sous 48 heures.",
+    "guaranteeLabel": "Garantie",
+    "audienceLabel": "Pour qui",
+    "durationLabel": "Durée",
+    "formatLabel": "Format",
+    "startLabel": "Démarrage",
+    "productsNote": "Les produits internes restent en développement et ne sont pas commercialisés. Nous livrons des missions.",
+    "families": {
       "advisory": {
-        "title": "Conseil technique",
-        "description": "Orientation architecture et conseil technologique stratégique.",
-        "features": [
-          "Architecture logicielle",
-          "Audits techniques",
-          "Conseil CTO",
-          "Revues de systèmes"
-        ]
-      }
-    }
-  },
-  "why": {
-    "eyebrow": "À propos",
-    "title": "Conçu pour la croissance. Ingénierie pour la fiabilité.",
-    "description": "Nous combinons réflexion stratégique et exécution technique pour livrer des plateformes dont les entreprises dépendent.",
-    "pillars": {
-      "mindset": {
-        "title": "Mentalité enterprise",
-        "description": "Nous pensons au-delà du code et nous concentrons sur les résultats business."
-      },
-      "expertise": {
-        "title": "Expertise FinTech",
-        "description": "Compréhension approfondie des paiements, intégrations et finance digitale."
-      },
-      "architecture": {
-        "title": "Architecture évolutive",
-        "description": "Des solutions conçues pour évoluer avec votre entreprise."
-      }
-    }
-  },
-  "team": {
-    "eyebrow": "Notre équipe",
-    "title": "L'équipe qui constitue Manarix",
-    "description": "Un collectif d'ingénieurs seniors alliant expertise FinTech, discipline enterprise et engagement commun pour bâtir l'infrastructure digitale de l'Afrique.",
-    "linkedinLabel": "{name} sur LinkedIn",
-    "members": {
-      "ceo": {
-        "initials": "AD",
-        "name": "Saifoulaye Diallo",
-        "role": "Fondateur & CEO",
-        "bio": "Dirige Manarix avec une vision produit et ingénierie, en accompagnant banques et fintechs pour transformer des objectifs business complexes en plateformes fiables.",
-        "expertise": ["Stratégie", "FinTech", "Partenariats"],
-        "location": "Dakar, Sénégal",
-        "linkedin": "https://linkedin.com/in/amadou-diallo"
-      },
-      "cto": {
-        "initials": "FN",
-        "name": "Souleymane Diallo",
-        "role": "Directrice de la technologie",
-        "bio": "Conçoit des systèmes mission-critical en privilégiant sécurité, scalabilité et maintenabilité sur les workloads paiement et enterprise.",
-        "expertise": ["Architecture", "Sécurité", "Design plateforme"],
-        "location": "Dakar, Sénégal",
-        "linkedin": "https://linkedin.com/in/fatou-ndiaye"
+        "title": "Conseil et audit",
+        "tagline": "Audit, architecture, performance, sécurité — une mission bornée"
       },
       "engineering": {
-        "initials": "IS",
-        "name": "Ibrahim Sow",
-        "role": "Head of Engineering",
-        "bio": "Pilote l'excellence engineering via des pratiques de delivery modernes, des standards de qualité et des squads performantes.",
-        "expertise": ["Leadership technique", "DevOps", "Delivery agile"],
-        "location": "Dakar, Sénégal",
-        "linkedin": "https://linkedin.com/in/ibrahim-sow"
+        "title": "Ingénierie",
+        "tagline": "API, backend, intégration, paiement, cloud — un projet livré"
       },
-      "fintech": {
-        "initials": "AC",
-        "name": "Aïssata Camara",
-        "role": "Lead Architecte FinTech",
-        "bio": "Spécialiste des passerelles de paiement, intégrations mobile money et architectures financières conformes aux exigences réglementaires en Afrique de l'Ouest.",
-        "expertise": ["Paiements", "APIs", "Intégrations"],
-        "location": "Abidjan, Côte d'Ivoire",
-        "linkedin": "https://linkedin.com/in/aissata-camara"
-      },
-      "cloud": {
-        "initials": "KM",
-        "name": "Kwame Mensah",
-        "role": "Lead Cloud Platform",
-        "bio": "Construit des infrastructures AWS-native résilientes, avec observabilité, automatisation et efficacité des coûts au cœur de chaque déploiement.",
-        "expertise": ["AWS", "Kubernetes", "SRE"],
-        "location": "Accra, Ghana",
-        "linkedin": "https://linkedin.com/in/kwame-mensah"
-      },
-      "delivery": {
-        "initials": "MB",
-        "name": "Mariama Ba",
-        "role": "Lead Delivery Client",
-        "bio": "Garantit une communication transparente, une delivery prévisible et des relations clients durables, de la discovery au support production.",
-        "expertise": ["Delivery", "Client Success", "PMO"],
-        "location": "Dakar, Sénégal",
-        "linkedin": "https://linkedin.com/in/mariama-ba"
+      "managed": {
+        "title": "Ingénierie managée",
+        "tagline": "Maintenance, observabilité, évolution — un abonnement"
       }
     },
-    "culture": {
-      "title": "De l'ingénierie avec ownership, précision et impact",
-      "description": "Nous opérons comme une extension des équipes de nos clients — en combinant connaissance du marché local et standards d'ingénierie de classe mondiale pour livrer des plateformes conçues pour durer."
-    }
-  },
-  "industries": {
-    "eyebrow": "Secteurs",
-    "title": "Secteurs que nous servons",
-    "description": "Expérience sectorielle approfondie dans les industries réglementées et à forte croissance de l'économie digitale africaine.",
+    "outOfScope": {
+      "title": "Ce que nous ne faisons pas",
+      "intro": "Hors périmètre :",
+      "items": {
+        "brochure": "Sites vitrines et projets de contenu",
+        "staffing": "Mise à disposition de développeurs au mois",
+        "oncallRfp": "Appels d'offres exigeant une astreinte permanente ou une équipe de plus de cinq personnes",
+        "equity": "Rémunération en parts de capital contre développement"
+      }
+    },
     "items": {
-      "fintech": {
-        "title": "FinTech",
-        "description": "Crédit digital, portefeuilles et innovation paiement."
+      "api-audit": {
+        "title": "Audit d'API et d'intégration",
+        "description": "Nous analysons vos APIs, l'authentification, les timeouts, les retries, les webhooks, l'idempotence, les logs et le monitoring. Vous repartez avec un Technical Integration Report : problèmes, risques, quick wins, architecture cible, feuille de route.",
+        "duration": "3 à 5 jours ouvrés",
+        "audience": "Équipes dont les APIs publiques ou partenaires deviennent difficiles à faire évoluer sans casser les clients.",
+        "guarantee": "Si le rapport ne vous apprend rien, nous ne facturons pas.",
+        "features": [
+          "Cartographie des contrats d'API et des points de rupture",
+          "Revue OAuth2 / JWT, erreurs, timeouts et retries",
+          "Webhooks, idempotence, logs et observabilité",
+          "Rapport d'intégration et roadmap priorisée"
+        ]
       },
-      "banking": {
-        "title": "Banque",
-        "description": "Modernisation core banking et canaux digitaux."
+      "payment-audit": {
+        "title": "Audit d'architecture paiements",
+        "description": "De la requête de paiement jusqu'au settlement : API, prestataire, webhook, transaction, registre, réconciliation. Vous obtenez un Architecture Assessment, une Risk Map et une Technical Roadmap — plus un Payment Reliability Score.",
+        "duration": "3 à 7 jours ouvrés",
+        "audience": "FinTech, PSP, mobile money, wallets, agrégateurs et plateformes qui encaissent vraiment.",
+        "guarantee": "Si le rapport ne vous apprend rien, nous ne facturons pas.",
+        "features": [
+          "Score de fiabilité par domaine, sur 100",
+          "Doubles paiements, webhooks rejoués, états incohérents",
+          "Risques de perte et de double débit chiffrés",
+          "Plan de correction priorisé en jours"
+        ]
       },
-      "insurance": {
-        "title": "Assurance",
-        "description": "Plateformes polices et automatisation des sinistres."
+      "architecture-review": {
+        "title": "Revue d'architecture",
+        "description": "État actuel, problèmes, risques, architecture cible, feuille de route de migration. Nous travaillons sur votre code, vos diagrammes et votre infrastructure — pas sur un slide générique.",
+        "duration": "3 à 5 jours ouvrés",
+        "audience": "Équipes dont chaque évolution devient risquée, lente ou politiquement difficile à lancer.",
+        "features": [
+          "Modèle C4 et diagramme d'architecture cible",
+          "ADR et principes d'architecture",
+          "Risques techniques priorisés",
+          "Feuille de route de migration"
+        ]
       },
-      "retail": {
-        "title": "Commerce",
-        "description": "Plateformes commerce et systèmes omnicanal."
+      "production-audit": {
+        "title": "Audit de fiabilité en production",
+        "description": "Timeouts, retries, circuit breakers, observabilité, haute disponibilité, runbooks. Vous repartez avec un Production Reliability Report — ce qui cassera, comment vous le saurez, et combien de temps pour récupérer.",
+        "duration": "5 jours ouvrés",
+        "audience": "Plateformes en production qui découvrent encore les incidents par un ticket client.",
+        "features": [
+          "Revue timeout, retry, circuit breaker, rate limiting",
+          "Logs, métriques, traces et alertes",
+          "Scénarios de panne et estimation du MTTR",
+          "Runbooks et plan de remédiation"
+        ]
       },
-      "logistics": {
-        "title": "Logistique",
-        "description": "Visibilité supply chain et opérations de flotte."
+      "security-audit": {
+        "title": "Audit de sécurité API",
+        "description": "OAuth2, JWT, RBAC, API Gateway, secrets, authentification des webhooks, OWASP API Security. Findings classés Critical / High / Medium / Low, avec un plan de remédiation.",
+        "duration": "3 à 5 jours ouvrés",
+        "audience": "Plateformes exposant des APIs à des partenaires, des apps mobiles ou des prestataires de paiement.",
+        "features": [
+          "Revue d'authentification et d'autorisation",
+          "Sécurité des webhooks et des secrets",
+          "Findings classés par sévérité",
+          "Plan de remédiation priorisé"
+        ]
       },
-      "healthcare": {
-        "title": "Santé",
-        "description": "Systèmes patients et plateformes de données de santé."
+      "performance-audit": {
+        "title": "Ingénierie de performance",
+        "description": "Réduire le temps de réponse et augmenter la capacité de la plateforme : baseline, profiling, identification des goulots, optimisation, test de charge, validation.",
+        "duration": "1 à 3 semaines selon le périmètre",
+        "audience": "Plateformes dont la latence, le débit ou le coût d'infrastructure commencent à bloquer la croissance.",
+        "features": [
+          "Baseline latence, throughput, erreurs",
+          "Profiling CPU, mémoire, requêtes, lag Kafka",
+          "Correctifs priorisés sur les goulots réels",
+          "Validation par test de charge"
+        ]
+      },
+      "reconciliation-diagnostic": {
+        "title": "Diagnostic de réconciliation",
+        "description": "Nous prenons un mois de vos données réelles — exports opérateurs d'un côté, transactions applicatives de l'autre — et nous produisons le rapprochement. Vous obtenez le montant exact de votre écart et son origine.",
+        "duration": "3 jours ouvrés",
+        "audience": "Toute entreprise qui rapproche encore ses encaissements manuellement.",
+        "features": [
+          "État d'écart chiffré",
+          "Causes identifiées",
+          "Volumétrie concernée"
+        ]
+      },
+      "golive-review": {
+        "title": "Revue de préparation au lancement",
+        "description": "Avant la mise en production : test de charge, scénarios de panne opérateur, plan de reprise, checklist de go-live.",
+        "duration": "5 jours ouvrés",
+        "audience": "Fintechs et plateformes à la veille d'un lancement.",
+        "features": [
+          "Rapport de tenue en charge",
+          "Plan de bascule",
+          "Points bloquants"
+        ]
+      },
+      "due-diligence": {
+        "title": "Due diligence technique",
+        "description": "Pour investisseurs et acquéreurs : évaluation indépendante de l'architecture, de la dette technique et de la capacité d'exécution d'une cible du secteur financier.",
+        "duration": "2 à 3 jours",
+        "audience": "Investisseurs et acquéreurs d'une cible du secteur financier.",
+        "features": [
+          "Rapport structuré",
+          "Niveau de risque par domaine",
+          "Estimation du coût de remise à niveau",
+          "Restitution au comité d'investissement"
+        ]
+      },
+      "training": {
+        "title": "Formation intra-entreprise",
+        "description": "Intégrer les paiements, sécuriser une API, observer une production — deux jours avec votre équipe technique, sur vos propres cas.",
+        "duration": "2 jours, dans vos locaux",
+        "audience": "Équipes techniques qui intègrent le mobile money ou des APIs critiques sans expertise dédiée.",
+        "features": [
+          "Support de formation",
+          "Exercices sur votre code",
+          "Plan d'action à l'issue"
+        ]
+      },
+      "spring-modernization": {
+        "title": "Sprint de modernisation backend",
+        "description": "Moderniser des backends legacy sans casser la production : montées de stack, modularisation, refonte d'API, pipelines événementiels, observabilité, résilience et cloud readiness. Expertise JVM/Spring approfondie — et travail pragmatique sur Node, Python et architectures polyglottes quand la production l'exige. Pas un big bang. Un chemin que vos équipes peuvent suivre.",
+        "duration": "3 à 8 semaines selon le périmètre",
+        "audience": "FinTechs, plateformes et agrégateurs dont le backend fonctionne — mais où chaque évolution devient risquée et coûteuse.",
+        "features": [
+          "Modernisation de stack (JVM, Node, runtime et frameworks)",
+          "Modularisation et refonte d'API",
+          "Résilience, tests, CI/CD",
+          "Observabilité avant et après bascule"
+        ]
+      },
+      "multi-rail": {
+        "title": "Intégration paiement multi-rails",
+        "description": "Wave, Orange Money, Free Money, carte bancaire, virement — intégrés proprement dans une architecture unique.",
+        "duration": "3 à 5 semaines",
+        "audience": "Plateformes qui encaissent sur plusieurs rails simultanément.",
+        "features": [
+          "Webhooks idempotents résistants au rejeu",
+          "Machine à états avec reprise automatique sur incident",
+          "Journalisation traçable transaction par transaction",
+          "Environnement de test, documentation et passation"
+        ]
+      },
+      "add-rail": {
+        "title": "Sprint d'intégration paiements",
+        "description": "Intégrer un PSP, un rail mobile money ou un rail de paiement dans une plateforme existante : architecture, APIs, webhooks, idempotence, retries, machine à états, réconciliation, monitoring, tests, documentation.",
+        "duration": "2 à 4 semaines",
+        "audience": "Équipes qui étendent un encaissement déjà en production.",
+        "features": [
+          "Intégration du rail sans casser ce qui fonctionne",
+          "Webhooks idempotents, retries et machine à états",
+          "Réconciliation, monitoring, tests et passation"
+        ]
+      },
+      "emergency": {
+        "title": "Intervention d'urgence — transactions perdues",
+        "description": "Des paiements encaissés côté opérateur mais absents de votre système. Des clients débités deux fois. Nous intervenons.",
+        "duration": "Démarrage sous 48 heures",
+        "audience": "Situation d'incident en production.",
+        "cta": "emergency",
+        "features": [
+          "Cause identifiée",
+          "Correctif déployé",
+          "État exact des transactions à régulariser"
+        ]
+      },
+      "ledger": {
+        "title": "Registre et réconciliation automatisée",
+        "description": "Le système qui vous dit chaque matin, exactement, combien vous avez encaissé.",
+        "duration": "4 à 8 semaines",
+        "audience": "Plateformes traitant des volumes mensuels significatifs sur plusieurs rails — typiquement plus de 50 M FCFA par mois.",
+        "features": [
+          "Registre en partie double en XOF, append-only et auditable",
+          "Rapprochement automatique des relevés opérateurs",
+          "Traitement des frais, commissions et délais de règlement propres à chaque rail",
+          "Génération de factures conformes aux mentions légales et au référentiel SYSCOHADA",
+          "Tableau de bord des écarts"
+        ]
+      },
+      "orchestration": {
+        "title": "Couche d'orchestration multi-PSP",
+        "description": "Une API unique pour vos équipes, plusieurs prestataires derrière, avec routage intelligent et bascule automatique en cas de panne d'un opérateur.",
+        "duration": "6 à 10 semaines",
+        "audience": "Agrégateurs, marketplaces, acteurs multi-pays.",
+        "features": [
+          "Moteur de routage configurable",
+          "Bascule automatique",
+          "Suivi comparé des taux de succès par prestataire",
+          "API unifiée documentée"
+        ]
+      },
+      "wallet": {
+        "title": "Système de portefeuille",
+        "description": "Comptes clients, soldes, dépôts, retraits, transferts internes — sur un registre auditable.",
+        "duration": "8 à 12 semaines",
+        "audience": "Marketplaces et plateformes lançant un produit wallet ou d'encaissement from scratch.",
+        "features": [
+          "Moteur de comptes en partie double",
+          "Opérations de dépôt, retrait et transfert",
+          "Historique auditable",
+          "Interface d'administration"
+        ]
+      },
+      "engineering-care": {
+        "title": "Manarix Engineering Care",
+        "description": "Après une mission : monitoring, corrections, petites évolutions, revue d'architecture, sécurité, performance et support en heures ouvrées.",
+        "duration": "Abonnement mensuel, sans engagement de durée",
+        "audience": "Plateformes en production qui ne peuvent pas découvrir un incident par un ticket client.",
+        "features": [
+          "Supervision et alertes",
+          "Corrections et petites évolutions",
+          "Revue technique mensuelle",
+          "Réponse en heures ouvrées"
+        ]
+      },
+      "engineering-pro": {
+        "title": "Architecture fractionnée",
+        "description": "Un architecte senior dans votre équipe, sans le recruter : architecture, ingénierie backend, intégrations paiement, revue de code, feuille de route, mentoring, support production en heures ouvrées.",
+        "duration": "Retainer mensuel, sans engagement de durée",
+        "audience": "Équipes techniques de 3 à 15 personnes sans architecte senior dédié.",
+        "features": [
+          "Architecture et ingénierie backend",
+          "Intégrations paiement et revue de code",
+          "Feuille de route et mentoring",
+          "Support production en heures ouvrées"
+        ]
+      },
+      "maintenance": {
+        "title": "Maintenance et évolutions",
+        "description": "Correctifs, adaptations aux évolutions des API opérateurs, petites évolutions fonctionnelles.",
+        "duration": "Forfait annuel proportionnel au périmètre couvert",
+        "audience": "Équipes qui veulent un filet après la mise en production.",
+        "features": [
+          "Correctifs sur le périmètre couvert",
+          "Adaptations aux évolutions d'API opérateurs",
+          "Petites évolutions fonctionnelles"
+        ]
       }
     }
   },
-  "process": {
-    "eyebrow": "Notre approche",
-    "title": "Comment nous travaillons",
-    "description": "Un processus d'ingénierie rigoureux conçu pour la clarté, la vélocité et le succès à long terme.",
-    "steps": {
-      "discover": {
-        "title": "Découvrir",
-        "description": "Comprendre les objectifs business et les défis."
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Domaines d'intervention",
+    "description": "Paiements, plateformes backend, APIs, architecture, cloud, observabilité, sécurité et performance — les leviers que nous actionnons sur les systèmes critiques.",
+    "items": {
+      "payments": {
+        "title": "Paiements",
+        "description": "Rails, webhooks, idempotence, settlement"
       },
-      "architect": {
-        "title": "Architecturer",
-        "description": "Concevoir des solutions évolutives."
+      "api": {
+        "title": "API & intégration",
+        "description": "Contrats, retries, timeouts, partenaires"
       },
-      "build": {
-        "title": "Construire",
-        "description": "Développer avec des pratiques d'ingénierie modernes."
+      "java": {
+        "title": "Plateformes backend",
+        "description": "Services, APIs, profondeur JVM, stacks polyglottes"
       },
-      "scale": {
-        "title": "Scaler",
-        "description": "Optimiser et accompagner la croissance."
+      "architecture": {
+        "title": "Architecture",
+        "description": "C4, ADR, migration progressive"
+      },
+      "cloud": {
+        "title": "Cloud",
+        "description": "Déploiement, HA, reprise"
+      },
+      "observability": {
+        "title": "Observabilité",
+        "description": "Logs, métriques, traces, alertes"
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "OAuth2, JWT, RBAC, webhooks"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Latence, débit, goulots, charge"
+      }
+    }
+  },
+  "whyManarix": {
+    "eyebrow": "Pourquoi Manarix",
+    "title": "Profondeur technique. Contexte métier. Expertise financière.",
+    "columns": {
+      "domain": {
+        "title": "Expertise métier",
+        "items": [
+          "Paiements",
+          "Mobile Money",
+          "Réconciliation",
+          "Règlement",
+          "Builds greenfield",
+          "Lancements de plateforme"
+        ]
+      },
+      "engineering": {
+        "title": "Excellence technique",
+        "items": [
+          "Plateformes backend & APIs",
+          "Systèmes distribués",
+          "Architecture événementielle",
+          "Java / Spring (profondeur enterprise)",
+          "Kafka & files de messages",
+          "Systèmes cloud-native",
+          "Observabilité"
+        ]
+      },
+      "impact": {
+        "title": "Impact business",
+        "items": [
+          "Fiabilité",
+          "Scalabilité",
+          "Livraison accélérée",
+          "Risque technique réduit",
+          "Maintenabilité",
+          "Prêt pour la production"
+        ]
+      }
+    }
+  },
+  "architecture": {
+    "eyebrow": "Autorité technique",
+    "title": "Conçu pour les systèmes où l'échec coûte cher.",
+    "principles": {
+      "idempotency": {
+        "title": "Idempotence",
+        "description": "Éviter les opérations financières dupliquées."
+      },
+      "resilience": {
+        "title": "Résilience",
+        "description": "Concevoir pour les retries, timeouts et pannes partielles."
+      },
+      "observability": {
+        "title": "Observabilité",
+        "description": "Savoir ce qui se passe dans les systèmes distribués."
+      },
+      "consistency": {
+        "title": "Cohérence",
+        "description": "Protéger l'intégrité des transactions entre services."
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Intégrer la sécurité dans l'architecture."
+      },
+      "reconciliation": {
+        "title": "Réconciliation",
+        "description": "Rendre les écarts financiers visibles et actionnables."
       }
     }
   },
   "caseStudies": {
-    "eyebrow": "Capacités",
-    "title": "Capacités sélectionnées",
-    "description": "Engagements représentatifs illustrant notre approche des défis d'ingénierie enterprise complexes.",
+    "eyebrow": "Études de cas",
+    "title": "Défis techniques. Résultats mesurables.",
+    "description": "Missions représentatives — détails anonymisés lorsque la confidentialité client l'exige.",
+    "challengeLabel": "Défi",
+    "approachLabel": "Approche",
+    "outcomeLabel": "Résultat",
+    "technologiesLabel": "Technologies",
     "items": {
-      "payment": {
-        "title": "Plateforme de paiement",
-        "description": "Architecture d'intégration multi-fournisseurs de paiement."
+      "payment-platform": {
+        "title": "Plateforme d'intégration de paiement",
+        "challenge": "Plusieurs prestataires de paiement avec des APIs et états de transaction incohérents.",
+        "approach": "Couche d'intégration unifiée avec idempotence, webhooks, retries et gestion d'état des transactions.",
+        "outcome": "Intégration de paiement simplifiée et visibilité opérationnelle améliorée.",
+        "technologies": ["Kafka", "PostgreSQL", "REST APIs", "Docker"]
       },
-      "operations": {
-        "title": "Plateforme opérations enterprise",
-        "description": "Automatisation et gestion des workflows digitaux."
-      },
-      "cloud": {
-        "title": "Modernisation cloud",
-        "description": "Migration d'applications legacy vers une infrastructure cloud-native."
+      "greenfield-platform": {
+        "title": "Plateforme de paiement greenfield",
+        "challenge": "Lancer un encaissement multi-rails pour une marketplace sans infrastructure de paiement existante.",
+        "approach": "Concevoir orchestration, ledger et couche d'intégration from scratch — idempotence, webhooks et observabilité intégrés dès le départ.",
+        "outcome": "Stack de paiement prête pour la production, livrée de façon incrémentale et scalable.",
+        "technologies": ["Kafka", "PostgreSQL", "REST APIs", "Kubernetes"]
       }
     }
   },
-  "mockups": {
-    "paymentConsole": "Console passerelle de paiement",
-    "operationsDashboard": "Tableau de bord opérations",
-    "cloudInfra": "Infrastructure cloud",
-    "volume": "Volume",
-    "successRate": "Taux de succès",
-    "providers": "Fournisseurs",
-    "active": "Actif",
-    "workflows": "Workflows",
-    "tasks": "Tâches",
-    "teams": "Équipes",
-    "reports": "Rapports",
-    "healthy": "Sain"
-  },
-  "testimonials": {
-    "eyebrow": "Partenariats",
-    "title": "Orientés vers des partenariats durables",
-    "description": "Nous mesurons notre succès par les systèmes que nous construisons et les relations que nous entretenons.",
-    "items": {
-      "one": {
-        "quote": "Manarix a livré une architecture d'intégration paiement qui a réduit notre time-to-market de plusieurs mois. Leur profondeur technique et discipline enterprise les distinguent.",
-        "author": "Directeur de la technologie",
-        "company": "Groupe de services financiers régional"
+  "credibility": {
+    "metrics": {
+      "experience": {
+        "value": "6+ ans",
+        "label": "Expérience en ingénierie"
       },
-      "two": {
-        "quote": "De la revue d'architecture au déploiement en production, l'équipe a démontré la fiabilité que nous attendons de partenaires mission-critical.",
-        "author": "Responsable transformation digitale",
-        "company": "Enterprise panafricaine"
+      "enterprise": {
+        "value": "Enterprise",
+        "label": "Plateformes paiement & FinTech"
       },
-      "three": {
-        "quote": "Ils ont compris nos contraintes réglementaires et construit une plateforme qui scale sans compromettre la sécurité ni la performance.",
-        "author": "CTO",
-        "company": "Startup FinTech émergente"
+      "stack": {
+        "value": "APIs · Events · Cloud",
+        "label": "Stack d'ingénierie backend"
+      },
+      "perspective": {
+        "value": "Afrique → Global",
+        "label": "Perspective de livraison"
       }
     }
   },
-  "clients": {
-    "eyebrow": "Ils nous font confiance",
-    "title": "Les entreprises qui nous ont fait confiance",
-    "description": "Des fintechs émergentes aux grandes entreprises établies, des organisations en Afrique de l'Ouest et centrale s'appuient sur Manarix pour leurs systèmes digitaux les plus critiques.",
-    "stats": {
-      "projects": {
-        "value": "20+",
-        "label": "Engagements enterprise"
+  "recruiter": {
+    "title": "Vous cherchez une expertise backend senior ?",
+    "description": "Besoin d'un Senior Backend Engineer, Software Architect ou spécialiste Paiements pour votre prochaine initiative ? Discutons du défi technique, du contexte équipe et du modèle d'engagement.",
+    "disclaimer": "Le conseil et l'expertise technique restent notre positionnement principal."
+  },
+  "sectionCta": {
+    "services": {
+      "title": "Vous ne savez pas quelle mission choisir ?",
+      "description": "Commencez par un diagnostic technique. Nous cartographions votre architecture et recommandons le bon périmètre.",
+      "primary": "Réserver un diagnostic technique →",
+      "secondary": "Voir tous les services"
+    },
+    "caseStudies": {
+      "title": "Vous faites face à un défi similaire ?",
+      "description": "Intégration de paiement, modernisation legacy ou build greenfield — diagnostiquons votre situation.",
+      "primary": "Discuter de votre architecture →",
+      "secondary": "Explorer notre expertise"
+    },
+    "architecture": {
+      "title": "Les systèmes de production méritent une architecture de production.",
+      "description": "Que vous soyez en pré-lancement ou en montée en charge, 30 minutes suffisent pour clarifier vos risques prioritaires.",
+      "primary": "Réserver un diagnostic technique →",
+      "secondary": "Demander un audit"
+    }
+  },
+  "labs": {
+    "eyebrow": "Labs",
+    "title": "Laboratoires publics",
+    "description": "Des démonstrateurs que nous construisons pour rendre visible notre pratique. Premier chantier : la fiabilité des paiements.",
+    "status": "À venir",
+    "items": {
+      "payments": {
+        "title": "Payment Reliability Lab",
+        "description": "Ce qui casse vraiment une chaîne de paiement, et comment on le voit.",
+        "steps": [
+          "Timeout",
+          "Retry dangereux",
+          "Requête dupliquée",
+          "Panne prestataire",
+          "Webhook rejoué",
+          "Panne Kafka",
+          "Réconciliation"
+        ]
       },
-      "sectors": {
-        "value": "6",
-        "label": "Industries réglementées"
+      "legacy": {
+        "title": "Legacy Modernization Lab",
+        "description": "Passer d'un Spring Boot legacy à un monolithe modulaire observable, sans big bang.",
+        "steps": [
+          "Spring Boot legacy",
+          "Monolithe modulaire",
+          "Événements",
+          "Observabilité",
+          "Cloud"
+        ]
       },
-      "retention": {
-        "value": "95%",
-        "label": "Fidélisation client"
+      "security": {
+        "title": "API Security Lab",
+        "description": "Les contrôles que nous vérifions dans un audit de sécurité API.",
+        "steps": [
+          "OAuth2",
+          "JWT",
+          "RBAC",
+          "Rate limiting",
+          "Sécurité des webhooks",
+          "API Gateway"
+        ]
+      },
+      "recovery": {
+        "title": "Disaster Recovery Lab",
+        "description": "Détecter, basculer, récupérer, valider — au lieu d'espérer que ça ne tombe pas.",
+        "steps": [
+          "Primaire",
+          "Panne",
+          "Détection",
+          "Failover",
+          "Recovery",
+          "Validation"
+        ]
+      }
+    }
+  },
+  "transparency": {
+    "eyebrow": "Le cabinet",
+    "title": "Deux ingénieurs. Une capacité assumée.",
+    "intro": "Manarix a été fondé à Dakar en 2026. La capacité est volontairement limitée : deux missions en parallèle, des interlocuteurs identifiés, pas d'intermédiaire commercial.",
+    "costsTitle": "Ce que cela limite",
+    "costs": "Deux missions en parallèle, pas davantage. Nous ne mobilisons pas une équipe de dix personnes, et nous ne répondons pas aux appels d'offres qui exigent une astreinte 24/7. Nous le disons dès le premier échange.",
+    "gainsTitle": "Ce que cela garantit",
+    "gains": "La personne qui a compris le problème est celle qui écrit le code. Pas de relais commercial, pas de junior affecté par défaut. Vous savez qui travaille, et vous pouvez lui parler.",
+    "commitmentsTitle": "Nos engagements, écrits dans chaque contrat",
+    "commitments": {
+      "milestones": {
+        "title": "Paiement par jalons",
+        "description": "Vous ne payez l'étape suivante que si la précédente est livrée et validée."
+      },
+      "ownership": {
+        "title": "Le code vous appartient",
+        "description": "Intégralement, dès le premier jour, déposé sur votre dépôt à vous."
+      },
+      "noLockin": {
+        "title": "Aucun verrouillage",
+        "description": "Pas de dépendance à un outil propriétaire Manarix. Un autre prestataire doit pouvoir reprendre derrière nous, et notre documentation est écrite pour ça."
+      },
+      "warranty": {
+        "title": "Garantie de correction 60 jours",
+        "description": "Après la mise en production, sans facturation supplémentaire."
+      },
+      "formal": {
+        "title": "Cabinet formellement constitué",
+        "description": "NINEA, RCCM, contrat de prestation, factures conformes."
+      }
+    }
+  },
+  "proofs": {
+    "eyebrow": "Insights",
+    "title": "Ce qui est vérifiable aujourd'hui",
+    "description": "Un produit interne livré. Des publications à paraître. Aucun logo client inventé.",
+    "xaalis": {
+      "label": "Produit interne",
+      "title": "Xaalis",
+      "subtitle": "Application de gestion financière personnelle",
+      "description": "Registre en partie double append-only en XOF, budget par enveloppes, gestion de revenus multiples. Ingestion de transactions sans open banking : capture des notifications Android, analyse des SMS opérateurs, import de relevés bancaires. Conçu et développé intégralement en interne.",
+      "cta": "Voir le détail"
+    },
+    "publications": {
+      "title": "Publications techniques",
+      "status": "À paraître",
+      "description": "Notes techniques à paraître sous notre nom, sur les problèmes que nous traitons en mission.",
+      "items": {
+        "webhooks": "Idempotence des webhooks de paiement : pourquoi vos clients sont débités deux fois",
+        "timeouts": "Pourquoi un timeout de paiement ne doit jamais déclencher automatiquement un nouveau paiement",
+        "reconciliation": "Réconciliation multi-rails Wave / Orange Money : le modèle de données qui tient",
+        "observability": "Votre API est-elle réellement observable ?",
+        "spring": "Comment moderniser Spring Boot sans casser la production"
       }
     },
+    "opensource": {
+      "title": "Code ouvert",
+      "status": "À venir",
+      "description": "Une bibliothèque documentée sera publiée sur le GitHub du cabinet — client d'intégration ou vérification de signatures webhook."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions fréquentes",
+    "description": "Capacité, collabs, tarifs, références et délais.",
     "items": {
-      "teranga": {
-        "initials": "TP",
-        "name": "Teranga Pay",
-        "sector": "FinTech",
-        "engagement": "Architecture passerelle de paiement et intégration mobile money.",
-        "region": "Afrique de l'Ouest"
+      "young": {
+        "question": "Pourquoi confier un système critique à un cabinet récent ?",
+        "answer": "Parce que la responsabilité est contractuelle et vérifiable : paiement par jalons, code déposé sur votre dépôt dès le premier jour, garantie de correction de 60 jours, audit initial remboursé s'il n'apporte rien. Une mission courte permet de juger le travail avant d'élargir le périmètre."
       },
-      "sahel": {
-        "initials": "SF",
-        "name": "Sahel Finance Group",
-        "sector": "Banque",
-        "engagement": "Plateforme bancaire digitale et modernisation du core banking.",
-        "region": "Région du Sahel"
+      "pricing": {
+        "question": "Pourquoi vos tarifs ne sont-ils pas en ligne ?",
+        "answer": "Parce que le montant dépend de la criticité, de l'état de l'existant et du volume que vous traitez. Un audit identique n'a pas le même prix pour une plateforme early-stage et pour un agrégateur à fort volume. Après un cadrage de 45 minutes, vous recevez une proposition chiffrée sous 48 heures — un chiffre ferme, pas une fourchette vague."
       },
-      "atlas": {
-        "initials": "AD",
-        "name": "Atlas Digital Bank",
-        "sector": "Banque",
-        "engagement": "Onboarding cloud-native et infrastructure API banking.",
-        "region": "Afrique du Nord & Ouest"
+      "capacity": {
+        "question": "Vous n'êtes que deux. Que se passe-t-il si l'un de vous est indisponible ?",
+        "answer": "Tout notre code est déposé sur votre dépôt, documenté pour être repris par un tiers. Nous ne créons aucune dépendance à notre présence — c'est une règle de conception, pas une promesse commerciale. Nous limitons aussi volontairement notre charge à deux projets simultanés pour ne jamais être en surengagement."
       },
-      "kora": {
-        "initials": "KT",
-        "name": "Kora Technologies",
-        "sector": "Enterprise",
-        "engagement": "Plateforme opérations enterprise et automatisation des workflows.",
-        "region": "Afrique de l'Ouest"
+      "partners": {
+        "question": "Nous sommes une agence / un ESN. Travaillez-vous en sous-traitance ?",
+        "answer": "Oui — sur l'encaissement uniquement. Vous gardez le contrat principal et la relation. Nous intervenons comme spécialiste nommé : audit, rails, webhooks, réconciliation. Rapport à votre nom ou au nôtre. Nous ne prenons pas le reste du projet, et nous ne contactons pas votre client pour le récupérer."
       },
-      "baobab": {
-        "initials": "BS",
-        "name": "Baobab Systems",
-        "sector": "Assurance",
-        "engagement": "Système de gestion des polices et moteur de traitement des sinistres.",
-        "region": "Afrique francophone"
+      "references": {
+        "question": "Pouvez-vous nous donner des références clients ?",
+        "answer": "Pas encore de références clients à afficher. Ce que nous pouvons montrer : l'architecture de Xaalis, un produit financier conçu et développé en interne, nos publications à paraître, et bientôt des laboratoires publics. Une revue technique courte de votre plateforme permet aussi de juger sur pièce."
       },
-      "mande": {
-        "initials": "ME",
-        "name": "Mande Enterprise",
-        "sector": "Logistique",
-        "engagement": "Plateforme de gestion de flotte et APIs de suivi en temps réel.",
-        "region": "Afrique de l'Ouest"
+      "region": {
+        "question": "Travaillez-vous avec des entreprises hors du Sénégal ?",
+        "answer": "Oui. Dakar d'abord, puis la zone UEMOA et, à distance, au-delà. Les plateformes de paiement et de FinTech sont naturellement régionales."
       },
-      "horizon": {
-        "initials": "HF",
-        "name": "Horizon FinTech",
-        "sector": "FinTech",
-        "engagement": "Infrastructure wallet et orchestration multi-rails de paiement.",
-        "region": "Afrique centrale"
+      "start": {
+        "question": "Combien de temps avant de démarrer ?",
+        "answer": "Notre prochaine fenêtre de disponibilité est septembre 2026. Un audit peut généralement démarrer sous deux semaines."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "L'équipe",
+    "title": "Les associés",
+    "description": "Vous savez qui travaille. Vous pouvez lui parler.",
+    "linkedinLabel": "{name} sur LinkedIn",
+    "members": {
+      "founder": {
+        "initials": "SD",
+        "name": "Saifoulaye Diallo",
+        "role": "Fondateur, architecte principal",
+        "bio": "Ingénieur logiciel senior. Systèmes financiers, plateformes backend, APIs critiques, architectures distribuées. Concepteur et développeur de Xaalis.",
+        "expertise": [
+          "Plateformes backend",
+          "Java / Spring",
+          "Architecture distribuée",
+          "Systèmes de paiement",
+          "Cloud"
+        ],
+        "location": "Dakar, Sénégal",
+        "linkedin": ""
       },
-      "nexus": {
-        "initials": "NP",
-        "name": "Nexus Payment Group",
-        "sector": "Paiements",
-        "engagement": "Plateforme d'acquisition marchande et système de réconciliation.",
-        "region": "Panafricain"
+      "partner": {
+        "initials": "SD",
+        "name": "Souleymane Diallo",
+        "role": "Associé",
+        "bio": "Associé de Manarix, basé à Dakar. Intervient sur la livraison des projets aux côtés du fondateur.",
+        "expertise": [],
+        "location": "Dakar, Sénégal",
+        "linkedin": ""
+      }
+    }
+  },
+  "partners": {
+    "eyebrow": "Partenaires",
+    "title": "Vous livrez le produit. Nous tenons l'encaissement.",
+    "description": "Agences, studios, ESN et PSP : vous gardez la relation et le contrat principal. Nous prenons uniquement la couche qui, si elle casse, vous coûte le client.",
+    "channels": {
+      "agencies": {
+        "title": "Agences et studios",
+        "description": "Vous livrez l'app, le site ou le métier. Nous intégrons les rails, les webhooks et la réconciliation — y compris en sous-traitance nommée dans votre devis."
+      },
+      "integrators": {
+        "title": "Intégrateurs et ESN",
+        "description": "Vous portez l'AO et l'astreinte. Nous intervenons 3 à 6 semaines comme architecte paiements / API, sans prétendre remplacer votre équipe."
+      },
+      "psps": {
+        "title": "PSP et agrégateurs",
+        "description": "Vous avez besoin d'implémenteurs qui ne cassent pas vos webhooks. Nous auditions, formons et ajoutons un rail chez vos marchands."
+      }
+    },
+    "rulesTitle": "Les règles de la collaboration",
+    "rules": {
+      "scope": {
+        "title": "Un périmètre, pas le projet entier",
+        "description": "Nous ne prenons jamais le contrat produit + paiement. L'encaissement seulement — sinon nous devenons un concurrent."
+      },
+      "account": {
+        "title": "Le compte reste le vôtre",
+        "description": "Pas de récupération de relation. Le client final vous appartient. Nous parlons technique, vous parlez commercial."
+      },
+      "label": {
+        "title": "Votre nom ou le nôtre",
+        "description": "Rapport d'audit white-label dans votre devis, ou marque Manarix visible. Vous choisissez avant le premier jour."
+      },
+      "handover": {
+        "title": "Reprise possible le lendemain",
+        "description": "Code chez le client, documentation écrite pour un tiers. Aucun outil propriétaire Manarix."
+      }
+    },
+    "ctaNote": "45 minutes pour voir si le périmètre est le nôtre. Si ce n'est pas le cas, nous le dirons — et nous pourrons vous orienter."
+  },
+  "industries": {
+    "eyebrow": "Secteurs",
+    "title": "Là où la chaîne d'encaissement compte",
+    "description": "FinTech et paiements d'abord — puis produits greenfield et plateformes qui encaissent. Pas toutes les entreprises.",
+    "items": {
+      "fintech": {
+        "title": "FinTech et paiements",
+        "description": "PSP, mobile money, agrégateurs, wallets et plateformes de paiement. Intégrations, webhooks, idempotence, réconciliation, incidents de production."
+      },
+      "greenfield": {
+        "title": "Produits greenfield",
+        "description": "Startups et équipes lançant un produit de paiement from zero : orchestration, ledger, encaissement multi-rails, readiness go-live."
+      },
+      "platforms": {
+        "title": "Plateformes qui encaissent",
+        "description": "Marketplaces, SaaS et entreprises digitales dont le revenu passe par Wave, Orange Money, un PSP ou une API partenaire. L'encaissement d'abord."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Approche",
+    "title": "Un processus de conseil conçu pour la production.",
+    "description": "De la découverte à la montée en charge — structuré, transparent, pensé pour l'infrastructure financière.",
+    "steps": {
+      "discover": {
+        "title": "Découvrir",
+        "description": "Comprendre votre activité, votre architecture et vos contraintes techniques."
+      },
+      "diagnose": {
+        "title": "Diagnostiquer",
+        "description": "Identifier les goulots, risques et opportunités."
+      },
+      "engineer": {
+        "title": "Concevoir",
+        "description": "Concevoir et implémenter la bonne solution."
+      },
+      "scale": {
+        "title": "Scaler",
+        "description": "Améliorer fiabilité, observabilité et maintenabilité à long terme."
       }
     }
   },
   "cta": {
-    "badge": "Contactez-nous",
-    "title": "Construisons votre prochaine",
-    "titleHighlight": "plateforme digitale",
-    "description": "Que vous lanciez un produit fintech, modernisiez un système enterprise ou scaliez vos opérations digitales, Manarix Solutions peut vous accompagner."
+    "badge": "Diagnostic technique",
+    "title": "Construisons l'infrastructure derrière votre prochaine étape de croissance.",
+    "titleHighlight": "",
+    "description": "Que vous intégriez des paiements, modernisiez un backend legacy ou construisiez une plateforme greenfield, commençons par une conversation technique.",
+    "reassurance": "30–45 min · Discussion technique · Sans engagement"
   },
   "contact": {
-    "formTitle": "Démarrer une conversation",
-    "fullName": "Nom complet",
+    "formTitle": "Réserver un diagnostic technique",
+    "fullName": "Nom",
     "workEmail": "E-mail professionnel",
     "company": "Entreprise",
-    "serviceInterest": "Service concerné",
-    "projectOverview": "Aperçu du projet",
-    "namePlaceholder": "Jane Okonkwo",
-    "emailPlaceholder": "jane@entreprise.com",
+    "family": "Type d'intervention",
+    "volume": "Volume mensuel traité",
+    "budget": "Budget envisagé",
+    "timeline": "Échéance",
+    "projectOverview": "Décrivez votre situation",
+    "namePlaceholder": "Aminata Diop",
+    "emailPlaceholder": "aminata@entreprise.sn",
     "companyPlaceholder": "Votre organisation",
-    "servicePlaceholder": "Sélectionnez un domaine de service",
-    "messagePlaceholder": "Parlez-nous de vos objectifs, délais et exigences techniques...",
-    "responseTime": "Nous répondons à toutes les demandes sous un jour ouvré.",
+    "familyPlaceholder": "Sélectionnez une famille",
+    "volumePlaceholder": "Sélectionnez une tranche",
+    "budgetPlaceholder": "Sélectionnez une tranche",
+    "timelinePlaceholder": "Sélectionnez une échéance",
+    "messagePlaceholder": "Écart de réconciliation, webhook rejoué, rail à ajouter, go-live à tenir — ou collaboration agence / ESN / PSP…",
+    "responseTime": "Réponse sous un jour ouvré. Si le besoin n'est pas le nôtre, nous le dirons clairement.",
     "successTitle": "Demande reçue",
-    "successMessage": "Merci. Notre équipe examinera votre demande et vous répondra sous un jour ouvré.",
+    "successMessage": "Merci. Nous examinerons votre demande et vous répondrons sous un jour ouvré.",
     "errorGeneric": "Une erreur s'est produite. Écrivez-nous directement ou réessayez ultérieurement.",
-    "services": {
-      "fintech": "Solutions FinTech & Paiement",
-      "enterprise": "Ingénierie logicielle enterprise",
-      "cloud": "Cloud & Ingénierie de plateforme",
-      "advisory": "Conseil technique",
-      "other": "Autre"
+    "families": {
+      "advisory": "Conseil et audit",
+      "engineering": "Ingénierie",
+      "managed": "Ingénierie managée",
+      "partnership": "Collaboration (agence, ESN, PSP)"
+    },
+    "volumes": {
+      "under5m": "Moins de 5 M FCFA",
+      "from5to50m": "5 à 50 M FCFA",
+      "from50to500m": "50 à 500 M FCFA",
+      "over500m": "Plus de 500 M FCFA",
+      "na": "Non applicable"
+    },
+    "budgets": {
+      "under1m": "Moins de 1 M FCFA",
+      "from1to3m": "1 à 3 M FCFA",
+      "from3to10m": "3 à 10 M FCFA",
+      "over10m": "Plus de 10 M FCFA",
+      "undecided": "À déterminer ensemble"
+    },
+    "timelines": {
+      "immediate": "Immédiate",
+      "month": "Sous 1 mois",
+      "quarter": "Sous 3 mois",
+      "exploratory": "Exploratoire"
     },
     "validation": {
       "formError": "Veuillez corriger les erreurs ci-dessous.",
-      "name": "Veuillez entrer votre nom complet.",
+      "name": "Veuillez entrer votre nom.",
       "email": "Veuillez entrer une adresse e-mail professionnelle valide.",
       "company": "Veuillez entrer le nom de votre entreprise.",
-      "service": "Veuillez sélectionner un domaine de service.",
-      "message": "Veuillez fournir un bref aperçu du projet (20 caractères minimum)."
+      "family": "Veuillez sélectionner un type d'intervention.",
+      "volume": "Veuillez indiquer le volume mensuel traité.",
+      "budget": "Veuillez indiquer le budget envisagé.",
+      "timeline": "Veuillez indiquer l'échéance.",
+      "message": "Veuillez décrire votre situation (20 caractères minimum)."
     }
   },
   "footer": {
-    "description": "Ingénierie FinTech & Enterprise.",
-    "homeLabel": "Manarix Solutions — retour en haut"
+    "description": "Ingénierie FinTech & Conseil",
+    "expertiseTitle": "Expertise",
+    "homeLabel": "Manarix Solutions — retour en haut",
+    "legalNote": "Mentions légales",
+    "expertise": {
+      "payments": "Intégration paiement",
+      "modernization": "Modernisation",
+      "greenfield": "Greenfield",
+      "architecture": "Architecture",
+      "distributed": "Systèmes distribués"
+    }
   },
   "logo": {
     "manarix": "Manarix",
@@ -469,195 +967,110 @@
   },
   "seo": {
     "serviceTypes": [
-      "Ingénierie logicielle FinTech",
-      "Développement de logiciels d'entreprise",
-      "Ingénierie de plateformes cloud",
-      "Conseil technique"
+      "Intégration de paiement",
+      "Audit d'architecture paiements",
+      "Modernisation backend",
+      "Plateforme de paiement greenfield"
     ]
   },
   "pages": {
     "common": {
       "home": "Accueil",
-      "services": "Services",
-      "work": "Capacités",
+      "services": "Missions",
+      "work": "Travaux",
       "about": "À propos",
       "privacy": "Politique de confidentialité",
+      "legal": "Mentions légales",
       "backToHome": "Retour à l'accueil",
-      "viewAllServices": "Voir tous les services",
-      "viewAllWork": "Voir toutes les capacités",
-      "challenges": "Défis que nous résolvons",
-      "deliverables": "Ce que nous livrons",
-      "technologies": "Technologies & outils",
+      "viewAllServices": "Voir toutes les missions",
+      "audience": "Pour qui",
+      "viewAllWork": "Voir nos travaux",
+      "challenges": "Ce que nous corrigeons",
+      "deliverables": "Livrables",
+      "technologies": "Périmètre technique",
       "ourProcess": "Notre approche",
-      "relatedCapabilities": "Capacités associées",
-      "relatedServices": "Services associés",
-      "readyToStart": "Prêt à démarrer ?",
-      "ctaDescription": "Parlez-nous de votre projet — notre équipe répond sous un jour ouvré.",
+      "relatedCapabilities": "Travaux associés",
+      "relatedServices": "Offre associée",
+      "readyToStartTitle": "Construisons l'infrastructure derrière votre prochaine étape de croissance.",
+      "readyToStart": "Proposition écrite sous 48 h, après un diagnostic technique de 45 minutes.",
+      "ctaDescription": "Périmètre, jalons et calendrier avant le premier jour facturé. Si le besoin n'est pas le nôtre, nous le dirons.",
       "context": "Contexte",
       "approach": "Approche",
-      "outcomes": "Résultats"
+      "outcomes": "Ce que ça démontre"
     },
     "servicesHub": {
-      "metaTitle": "Nos services",
-      "metaDescription": "FinTech, logiciels enterprise, ingénierie cloud et conseil technique pour les plateformes digitales critiques en Afrique.",
-      "title": "Services d'ingénierie",
-      "description": "Des capacités de bout en bout pour concevoir, construire et faire évoluer les plateformes digitales dont votre entreprise dépend."
-    },
-    "serviceDetail": {
-      "fintech": {
-        "metaTitle": "Solutions FinTech & Paiements",
-        "metaDescription": "Infrastructures de paiement sécurisées, intégrations mobile money, systèmes de portefeuille et APIs de paiement pour l'écosystème financier africain.",
-        "headline": "Solutions FinTech & Paiements",
-        "subheadline": "Concevoir et intégrer des infrastructures de paiement sécurisées reliant banques, opérateurs, marchands et utilisateurs finaux.",
-        "challenges": [
-          "Rails de paiement fragmentés selon les marchés et fournisseurs",
-          "Exigences réglementaires et conformité des données financières",
-          "Systèmes legacy freinant les lancements produits",
-          "Réconciliation et règlement à grande échelle"
-        ],
-        "deliverables": [
-          "Architecture de passerelle et orchestration de paiements",
-          "Intégrations mobile money et prestataires cartes",
-          "Conception de portefeuilles et systèmes de ledger",
-          "APIs de paiement et parcours d'onboarding marchands"
-        ],
-        "technologies": ["APIs REST & GraphQL", "PostgreSQL", "AWS", "Redis", "Patterns PCI", "Architecture événementielle"]
-      },
-      "enterprise": {
-        "metaTitle": "Ingénierie logicielle Enterprise",
-        "metaDescription": "Applications métier, plateformes SaaS, APIs, microservices et modernisation legacy pour l'échelle en Afrique.",
-        "headline": "Ingénierie logicielle Enterprise",
-        "subheadline": "Solutions logicielles sur mesure conçues pour la performance, la maintenabilité et la croissance en environnement régulé.",
-        "challenges": [
-          "Workflows manuels ralentissant les opérations",
-          "Systèmes monolithiques difficiles à faire évoluer",
-          "Manque de visibilité entre les unités métier",
-          "Lacunes d'intégration entre outils internes"
-        ],
-        "deliverables": [
-          "Applications métier et plateformes internes",
-          "Produits SaaS et architectures multi-tenant",
-          "APIs, microservices et couches d'intégration",
-          "Modernisation legacy et migration par phases"
-        ],
-        "technologies": ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "Docker", "Pipelines CI/CD"]
-      },
-      "cloud": {
-        "metaTitle": "Ingénierie Cloud & Plateforme",
-        "metaDescription": "Architectures AWS-native, DevOps, CI/CD et observabilité pour des plateformes cloud résilientes et évolutives.",
-        "headline": "Ingénierie Cloud & Plateforme",
-        "subheadline": "Infrastructures cloud-native optimisées pour la fiabilité, la sécurité et l'efficacité des coûts à mesure que votre plateforme scale.",
-        "challenges": [
-          "Disponibilité imprévisible et gestion d'incidents",
-          "Processus de déploiement lents et manuels",
-          "Coûts cloud en hausse sans visibilité",
-          "Lacunes de sécurité et de contrôle d'accès"
-        ],
-        "deliverables": [
-          "Conception et implémentation d'architecture AWS",
-          "Pipelines CI/CD et infrastructure as code",
-          "Monitoring, alerting et pratiques SRE",
-          "Migration cloud et orchestration de conteneurs"
-        ],
-        "technologies": ["AWS", "Terraform", "Docker", "Kubernetes", "GitHub Actions", "Datadog / CloudWatch"]
-      },
-      "advisory": {
-        "metaTitle": "Conseil technique",
-        "metaDescription": "Revues d'architecture, audits techniques, conseil CTO et évaluations système pour équipes enterprise et fintech.",
-        "headline": "Conseil technique",
-        "subheadline": "Accompagnement stratégique pour réduire les risques, aligner l'ingénierie sur les objectifs métier et accélérer la livraison.",
-        "challenges": [
-          "Incertitude avant des investissements plateforme majeurs",
-          "Dette technique bloquant l'exécution de la roadmap",
-          "Architecture ne suivant pas la croissance",
-          "Besoin d'une évaluation experte indépendante"
-        ],
-        "deliverables": [
-          "Revues d'architecture et de roadmap",
-          "Audits techniques et évaluations de risques",
-          "Conseil CTO et leadership engineering",
-          "Design système et évaluation de fournisseurs"
-        ],
-        "technologies": ["Diagrammes d'architecture", "Revues sécurité", "Analyse performance", "Évaluation d'équipe", "Planification roadmap"]
-      }
+      "metaTitle": "Nos missions",
+      "metaDescription": "Intégration de paiement, modernisation backend et plateformes greenfield — proposition écrite sous 48 h après un diagnostic de 45 minutes.",
+      "title": "Nos missions",
+      "description": "Trois portes d'entrée : intégrer des paiements, moderniser un backend, ou construire en greenfield. Chaque mission commence par un diagnostic technique de 45 minutes et une proposition écrite sous 48 heures."
     },
     "workHub": {
-      "metaTitle": "Capacités sélectionnées",
-      "metaDescription": "Engagements représentatifs illustrant notre approche des plateformes de paiement, opérations enterprise et modernisation cloud.",
-      "title": "Capacités sélectionnées",
-      "description": "Comment nous abordons des défis d'ingénierie complexes et critiques — de l'architecture à la production."
+      "metaTitle": "Ce que nous avons construit",
+      "metaDescription": "Xaalis, produit financier interne conçu et développé par Manarix — et les publications techniques à venir.",
+      "title": "Ce que nous avons construit",
+      "description": "Travaux réels et démontrables. Les missions clients figureront ici avec accord écrit."
     },
     "workDetail": {
-      "payment-platform": {
-        "metaTitle": "Architecture plateforme de paiement",
-        "metaDescription": "Architecture d'intégration multi-fournisseurs pour fintechs et institutions financières en Afrique.",
-        "headline": "Plateforme de paiement",
-        "subheadline": "Architecture d'intégration multi-fournisseurs connectant mobile money, cartes et virements bancaires via une API unifiée.",
-        "context": "Un groupe de services financiers régional devait lancer des produits de paiement digital sur plusieurs marchés sans reconstruire les intégrations pour chaque fournisseur.",
-        "approach": "Nous avons conçu une couche d'orchestration agnostique avec gestion idempotente des transactions, normalisation des webhooks et moteur de réconciliation — permettant d'ajouter de nouveaux rails en semaines, pas en mois.",
+      "xaalis": {
+        "metaTitle": "Xaalis — gestion financière personnelle",
+        "metaDescription": "Application de gestion financière pour le marché UEMOA : registre en partie double en XOF, ingestion sans open banking.",
+        "headline": "Xaalis",
+        "subheadline": "Application de gestion financière personnelle pour le marché UEMOA. Conçue et développée intégralement en interne.",
+        "context": "Il n'existe pas d'open banking utile en zone UEMOA. Pour construire un produit financier personnel qui tienne, il faut ingérer les transactions autrement : notifications Android, SMS opérateurs, relevés bancaires — puis les tenir dans un registre en XOF.",
+        "approach": "Nous avons conçu un registre en partie double append-only, un budget par enveloppes et une gestion de revenus multiples. L'ingestion ne dépend d'aucune API bancaire tierce. C'est un produit interne, démontrable, qui exerce exactement la compétence que nous vendons : systèmes financiers, idempotence, réconciliation, XOF.",
         "outcomes": [
-          "API unifiée sur 12+ fournisseurs de paiement",
-          "Réduction du time-to-market d'intégration de plusieurs mois",
-          "Taux de succès transactionnel 99,7 %+ en production",
-          "Journalisation et hooks conformité prêts pour audit"
+          "Registre en partie double append-only en XOF",
+          "Budget par enveloppes et revenus multiples",
+          "Ingestion sans open banking : notifications Android, SMS opérateurs, import de relevés",
+          "Conçu et développé intégralement en interne — démontrable en vidéo"
         ],
-        "relatedService": "fintech"
-      },
-      "operations-platform": {
-        "metaTitle": "Plateforme opérations enterprise",
-        "metaDescription": "Automatisation de workflows et plateforme de gestion opérationnelle pour entreprises pan-africaines.",
-        "headline": "Plateforme opérations enterprise",
-        "subheadline": "Automatisation de workflows et système de gestion remplaçant les processus manuels par des opérations traçables et scalables.",
-        "context": "Une entreprise pan-africaine dépendait de tableurs et d'e-mails pour gérer les workflows inter-équipes, créant retards et risques de conformité.",
-        "approach": "Nous avons construit une plateforme modulaire avec accès par rôles, pipelines d'approbation configurables, gestion documentaire et tableaux de bord temps réel — intégrée aux ERP existants.",
-        "outcomes": [
-          "80 % de réduction des transferts manuels",
-          "Piste d'audit de bout en bout pour la conformité",
-          "Visibilité temps réel sur 6 unités métier",
-          "Déploiement par phases sans perturber les opérations"
-        ],
-        "relatedService": "enterprise"
-      },
-      "cloud-modernization": {
-        "metaTitle": "Modernisation cloud",
-        "metaDescription": "Migration d'applications legacy vers une infrastructure AWS cloud-native résiliente avec observabilité et automatisation.",
-        "headline": "Modernisation cloud",
-        "subheadline": "Migration d'applications legacy vers une infrastructure cloud-native conçue pour la résilience, l'observabilité et la croissance.",
-        "context": "Une fintech en croissance devait quitter une infrastructure on-premise vieillissante pour respecter les SLA de disponibilité et supporter une croissance rapide.",
-        "approach": "Nous avons exécuté une migration par phases vers AWS avec services conteneurisés, infrastructure as code, CI/CD automatisé et monitoring complet — minimisant les interruptions.",
-        "outcomes": [
-          "SLA de disponibilité 99,9 % atteint post-migration",
-          "Fréquence de déploiement passée de mensuelle à quotidienne",
-          "30 % d'optimisation des coûts infrastructure",
-          "Observabilité complète sur tous les services production"
-        ],
-        "relatedService": "cloud"
+        "relatedService": "ledger"
       }
     },
     "about": {
       "metaTitle": "À propos de Manarix Solutions",
-      "metaDescription": "Équipe d'ingénierie FinTech et enterprise construisant l'infrastructure digitale de l'Afrique avec ownership, précision et impact.",
+      "metaDescription": "Conseil en intégration de paiement, modernisation backend et plateformes greenfield à Dakar.",
       "title": "À propos de Manarix",
-      "description": "Nous sommes un collectif d'ingénieurs seniors accompagnant banques, fintechs et entreprises pour construire les plateformes de l'économie digitale africaine.",
-      "missionTitle": "Notre mission",
-      "mission": "Concevoir des plateformes digitales fiables et évolutives qui aident les organisations africaines à rivaliser mondialement — en combinant connaissance du marché local et discipline d'ingénierie de classe mondiale.",
-      "visionTitle": "Notre vision",
-      "vision": "Une Afrique où chaque entreprise, banque et innovateur a accès à une technologie de niveau enterprise adaptée à son contexte, pas importée sans adaptation."
+      "description": "Un cabinet d'ingénierie fondé à Dakar en 2026. Nous aidons fintechs, PSP et plateformes digitales à construire des infrastructures de paiement fiables.",
+      "missionTitle": "Ce que nous faisons",
+      "mission": "Intégration de paiement, modernisation backend et builds greenfield. Nous auditons les infrastructures de paiement, intégrons les rails et livrons des plateformes production-grade. Pas de sites vitrines, pas de staffing, pas de récupération de compte partenaire.",
+      "visionTitle": "Comment nous travaillons",
+      "vision": "Le consulting d'abord, puis les retainers, puis les produits. Deux missions en parallèle. Paiement par jalons. Code chez le client dès le premier jour. Les agences et ESN gardent la relation ; nous tenons la couche paiement."
+    },
+    "legal": {
+      "metaTitle": "Mentions légales",
+      "metaDescription": "Éditeur, hébergement et contact de manarix-solutions.com.",
+      "title": "Mentions légales",
+      "intro": "Informations légales relatives au site manarix-solutions.com, édité par Manarix Solutions.",
+      "publisherTitle": "Éditeur",
+      "publisherBody": "Manarix Solutions — cabinet d'ingénierie basé à Dakar, Sénégal. Fondé en 2026.",
+      "directorTitle": "Directeur de la publication",
+      "directorBody": "Saifoulaye Diallo",
+      "identifiersTitle": "Identifiants",
+      "identifiersPending": "Les identifiants formels (forme juridique, NINEA, RCCM) seront publiés ici dès l'immatriculation effective. Ils figureront également sur chaque contrat et chaque facture.",
+      "nineaLabel": "NINEA",
+      "rccmLabel": "RCCM",
+      "formLabel": "Forme juridique",
+      "addressTitle": "Adresse",
+      "hostingTitle": "Hébergement",
+      "hostingBody": "Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.",
+      "contactTitle": "Contact",
+      "contactBody": "Pour toute question : {email}."
     },
     "privacy": {
       "metaTitle": "Politique de confidentialité",
       "metaDescription": "Comment Manarix Solutions collecte, utilise et protège les données personnelles via notre site et formulaires de contact.",
       "title": "Politique de confidentialité",
-      "lastUpdated": "Dernière mise à jour : juin 2025",
-      "intro": "Manarix Solutions (« nous ») respecte votre vie privée. Cette politique explique comment nous traitons les informations collectées via manarix.com.",
+      "lastUpdated": "Dernière mise à jour : août 2026",
+      "intro": "Manarix Solutions (« nous ») respecte votre vie privée. Cette politique explique comment nous traitons les informations collectées via manarix-solutions.com.",
       "sections": {
         "collect": {
           "title": "Informations collectées",
-          "body": "Via notre formulaire de contact, nous collectons nom, e-mail professionnel, entreprise, intérêt de service et description du projet. Des données techniques standard (navigateur, adresse IP) peuvent être enregistrées via les logs serveur."
+          "body": "Via notre formulaire de contact, nous collectons nom, e-mail professionnel, entreprise, type d'intervention, volume mensuel traité, budget envisagé, échéance et description de la situation. Des données techniques standard (navigateur, adresse IP) peuvent être enregistrées via les logs serveur. Si vous nous contactez via WhatsApp, les règles de confidentialité de WhatsApp s'appliquent également."
         },
         "use": {
           "title": "Utilisation des informations",
-          "body": "Nous utilisons vos informations uniquement pour répondre aux demandes, planifier des consultations et améliorer nos services. Nous ne vendons pas vos données personnelles."
+          "body": "Nous utilisons vos informations uniquement pour répondre aux demandes, planifier un diagnostic et exécuter une mission. Nous ne vendons pas vos données personnelles."
         },
         "retention": {
           "title": "Conservation des données",
@@ -665,7 +1078,7 @@
         },
         "rights": {
           "title": "Vos droits",
-          "body": "Vous pouvez demander l'accès, la correction ou la suppression de vos données en écrivant à hello@manarix.com. Nous répondons sous 30 jours."
+          "body": "Vous pouvez demander l'accès, la correction ou la suppression de vos données en écrivant à hello@manarix-solutions.com. Nous répondons sous 30 jours."
         },
         "security": {
           "title": "Sécurité",
@@ -673,7 +1086,7 @@
         },
         "contact": {
           "title": "Contact",
-          "body": "Pour toute question relative à la confidentialité : hello@manarix.com."
+          "body": "Pour toute question relative à la confidentialité : hello@manarix-solutions.com."
         }
       }
     }
