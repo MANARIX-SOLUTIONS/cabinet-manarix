@@ -26,21 +26,21 @@ export async function Transparency() {
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           <FadeIn delay={0.08}>
             <article className="card-accent-top premium-card h-full p-8">
-              <p className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
-                {t("costsTitle")}
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-                {t("costs")}
-              </p>
-            </article>
-          </FadeIn>
-          <FadeIn delay={0.12}>
-            <article className="card-accent-top premium-card h-full p-8">
               <p className="text-[11px] font-medium tracking-[0.16em] text-secondary uppercase">
                 {t("gainsTitle")}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-text-primary">
                 {t("gains")}
+              </p>
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.12}>
+            <article className="card-accent-top premium-card h-full p-8">
+              <p className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
+                {t("costsTitle")}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+                {t("costs")}
               </p>
             </article>
           </FadeIn>
