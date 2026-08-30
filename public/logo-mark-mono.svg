@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Manarix">
+  <path
+    d="M7.5 8H10.9L16 14.2L21.1 8H24.5V22H21.1V13.4L16 19.6L10.9 13.4V22H7.5Z"
+    fill="currentColor"
+  />
+  <path
+    d="M7.5 24.8H24.5"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linecap="square"
+  />
+</svg>
