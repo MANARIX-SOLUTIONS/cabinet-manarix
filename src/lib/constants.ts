@@ -295,11 +295,25 @@ export const WORK_SLUGS = {
 
 export type WorkId = keyof typeof WORK_SLUGS;
 
-export const WORK_SLUG_LIST = Object.values(WORK_SLUGS);
+export type WorkSlug = (typeof WORK_SLUGS)[WorkId];
+
+/**
+ * Xaalis is our internal product. Its copy, detail page and mockup are kept
+ * intact — flip this to true to publish it again.
+ */
+export const SHOW_XAALIS = false;
+
+export const ENABLED_WORK_IDS: readonly WorkId[] = SHOW_XAALIS
+  ? (["xaalis"] as const)
+  : ([] as const);
+
+export const WORK_SLUG_LIST: readonly WorkSlug[] = ENABLED_WORK_IDS.map(
+  (id) => WORK_SLUGS[id],
+);
 
 export const WORK_ID_BY_SLUG = Object.fromEntries(
-  Object.entries(WORK_SLUGS).map(([id, slug]) => [slug, id]),
-) as Record<(typeof WORK_SLUG_LIST)[number], WorkId>;
+  ENABLED_WORK_IDS.map((id) => [WORK_SLUGS[id], id]),
+) as Partial<Record<WorkSlug, WorkId>>;
 
 export type ValidationKey =
   | "name"

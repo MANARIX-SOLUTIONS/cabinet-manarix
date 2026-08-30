@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
-import { CASE_STUDY_IDS } from "@/lib/constants";
+import { CASE_STUDY_IDS, SHOW_XAALIS } from "@/lib/constants";
 import { workPath } from "@/lib/paths";
 
 export async function CaseStudies() {
@@ -71,30 +71,32 @@ export async function CaseStudies() {
           })}
         </div>
 
-        <FadeIn delay={0.16}>
-          <article className="card-accent-top premium-card mt-5 flex flex-col gap-4 p-7 sm:flex-row sm:items-center sm:justify-between lg:p-8">
-            <div>
-              <p className="text-[11px] font-medium tracking-[0.16em] text-secondary uppercase">
-                {tp("xaalis.label")}
-              </p>
-              <h3 className="mt-2 font-heading text-lg font-semibold text-text-primary">
-                {tp("xaalis.title")}
-              </h3>
-              <p className="mt-1 max-w-xl text-sm text-text-secondary">
-                {tp("xaalis.subtitle")}
-              </p>
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-text-secondary">
-                {tp("xaalis.description")}
-              </p>
-            </div>
-            <Link
-              href={workPath("xaalis")}
-              className="shrink-0 text-sm font-medium text-secondary transition-colors hover:text-secondary/80"
-            >
-              {tp("xaalis.cta")} →
-            </Link>
-          </article>
-        </FadeIn>
+        {SHOW_XAALIS && (
+          <FadeIn delay={0.16}>
+            <article className="card-accent-top premium-card mt-5 flex flex-col gap-4 p-7 sm:flex-row sm:items-center sm:justify-between lg:p-8">
+              <div>
+                <p className="text-[11px] font-medium tracking-[0.16em] text-secondary uppercase">
+                  {tp("xaalis.label")}
+                </p>
+                <h3 className="mt-2 font-heading text-lg font-semibold text-text-primary">
+                  {tp("xaalis.title")}
+                </h3>
+                <p className="mt-1 max-w-xl text-sm text-text-secondary">
+                  {tp("xaalis.subtitle")}
+                </p>
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-text-secondary">
+                  {tp("xaalis.description")}
+                </p>
+              </div>
+              <Link
+                href={workPath("xaalis")}
+                className="shrink-0 text-sm font-medium text-secondary transition-colors hover:text-secondary/80"
+              >
+                {tp("xaalis.cta")} →
+              </Link>
+            </article>
+          </FadeIn>
+        )}
       </Container>
     </section>
   );

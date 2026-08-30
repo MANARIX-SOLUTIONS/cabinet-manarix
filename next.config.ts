@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import { SHOW_XAALIS } from "./src/lib/constants";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
@@ -26,7 +27,7 @@ const serviceHubRedirects = [
 ] as const;
 
 const workRedirects: Array<[string, string]> = [
-  ["payment-platform", "/work/xaalis"],
+  ["payment-platform", SHOW_XAALIS ? "/work/xaalis" : "/work"],
   ["operations-platform", "/work"],
   ["cloud-modernization", "/work"],
 ];
