@@ -668,13 +668,13 @@
     }
   },
   "transparency": {
-    "eyebrow": "Le cabinet",
-    "title": "Deux ingénieurs. Une capacité assumée.",
-    "intro": "Manarix a été fondé à Dakar en 2026. La capacité est volontairement limitée : deux missions en parallèle, des interlocuteurs identifiés, pas d'intermédiaire commercial.",
-    "costsTitle": "Ce que cela limite",
-    "costs": "Deux missions en parallèle, pas davantage. Nous ne mobilisons pas une équipe de dix personnes, et nous ne répondons pas aux appels d'offres qui exigent une astreinte 24/7. Nous le disons dès le premier échange.",
+    "eyebrow": "Modèle d'intervention",
+    "title": "Deux missions à la fois. Aucun relais.",
+    "intro": "Dans les systèmes de paiement, les pannes coûteuses viennent d'un contexte perdu : la personne qui a compris la contrainte est rarement celle qui livre le code. Nous nous limitons à deux missions pour que cet écart n'existe jamais — l'ingénieur qui conçoit votre architecture est celui qui l'implémente.",
     "gainsTitle": "Ce que cela garantit",
-    "gains": "La personne qui a compris le problème est celle qui écrit le code. Pas de relais commercial, pas de junior affecté par défaut. Vous savez qui travaille, et vous pouvez lui parler.",
+    "gains": "Des ingénieurs seniors identifiés, du premier échange à la mise en production. Celui qui conçoit votre architecture écrit le code, pilote le déploiement et répond après le lancement. Pas de relais commercial, pas de chargé de compte, pas de junior affecté par défaut.",
+    "costsTitle": "Quand nous ne sommes pas le bon choix",
+    "costs": "Deux missions en parallèle, pas davantage. S'il vous faut une équipe de dix personnes mobilisée la semaine prochaine, une astreinte 24/7 ou un prestataire pour répondre à un appel d'offres de 200 pages, ce n'est pas nous — et vous l'entendrez dès le premier échange, pas trois semaines plus tard.",
     "commitmentsTitle": "Nos engagements, écrits dans chaque contrat",
     "commitments": {
       "milestones": {

@@ -668,13 +668,13 @@
     }
   },
   "transparency": {
-    "eyebrow": "The firm",
-    "title": "Two engineers. Deliberate capacity.",
-    "intro": "Manarix was founded in Dakar in 2026. Capacity is deliberately limited: two concurrent engagements, named counterparts, no sales intermediary.",
-    "costsTitle": "What that limits",
-    "costs": "Two engagements in parallel, no more. We do not staff a ten-person team, and we do not bid on RFPs that require 24/7 on-call. We say so on the first call.",
-    "gainsTitle": "What that guarantees",
-    "gains": "The person who understood the problem is the person who writes the code. No sales layer, no junior assigned by default. You know who is working, and you can speak with them.",
+    "eyebrow": "Operating model",
+    "title": "Two engagements at a time. Zero handoffs.",
+    "intro": "In payment systems, the expensive failures come from lost context — the person who understood the constraint is rarely the person who ships the code. We cap ourselves at two engagements so that gap never opens: the engineer who maps your architecture is the one who implements it.",
+    "gainsTitle": "What this guarantees",
+    "gains": "Named senior engineers, from the first call to go-live. The person who maps your architecture writes the code, owns the deployment and answers after launch. No sales layer, no account manager, no junior assigned by default.",
+    "costsTitle": "Where we are not the right fit",
+    "costs": "Two engagements in parallel, no more. If you need a ten-person team staffed next week, a 24/7 on-call rotation, or a vendor to answer a 200-page RFP, we are not it — and you will hear that on the first call, not three weeks in.",
     "commitmentsTitle": "Commitments written into every contract",
     "commitments": {
       "milestones": {
