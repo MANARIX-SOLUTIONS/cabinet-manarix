@@ -13,24 +13,26 @@ All user-facing text lives in JSON translation files. Keep **English and French 
 
 ### Namespace map (homepage)
 
-| Namespace      | Section                                     |
-| -------------- | ------------------------------------------- |
-| `metadata`     | `<title>`, meta description, tagline        |
-| `hero`         | Hero headline, stats, subheadline           |
-| `marquee`      | Technology ticker items                     |
-| `services`     | Services grid                               |
-| `industries`   | Industries grid                             |
-| `why`          | Why Manarix pillars                         |
-| `team`         | Team members (`team.members.{id}`)          |
-| `process`      | 4-step delivery process                     |
-| `caseStudies`  | Featured work cards                         |
-| `trust`        | Trust metrics                               |
-| `clients`      | Client logos / cards (`clients.items.{id}`) |
-| `testimonials` | Client quotes                               |
-| `cta`          | Bottom call-to-action                       |
-| `contact`      | Form labels, validation, success/error      |
-| `footer`       | Footer copy and links                       |
-| `nav`          | Navigation labels                           |
+| Namespace      | Section                                    |
+| -------------- | ------------------------------------------ |
+| `metadata`     | `<title>`, meta description, tagline       |
+| `hero`         | Hero headline, stats, subheadline          |
+| `marquee`      | Expertise ticker items                     |
+| `problem`      | Costly problems we solve                   |
+| `expertise`    | Technical domains (means, not positioning) |
+| `services`     | Engagement families and offers             |
+| `partners`     | Agency / SI / PSP collaboration            |
+| `labs`         | Planned public demonstrators               |
+| `industries`   | Industries grid                            |
+| `transparency` | Two-engineer positioning                   |
+| `proofs`       | Real work (Xaalis, publications)           |
+| `team`         | Team members (`team.members.{id}`)         |
+| `process`      | 4-step delivery process                    |
+| `faq`          | Homepage FAQ                               |
+| `cta`          | Bottom call-to-action                      |
+| `contact`      | Form labels, validation, success/error     |
+| `footer`       | Footer copy and links                      |
+| `nav`          | Navigation labels                          |
 
 Inner pages use `pages.*` namespaces — see existing keys for `about`, `privacy`, `servicesHub`, `workHub`, `serviceDetail.{slug}`, `workDetail.{slug}`.
 
@@ -42,10 +44,9 @@ Inner pages use `pages.*` namespaces — see existing keys for `about`, `privacy
 
    ```ts
    export const SERVICE_IDS = [..., "your-service"] as const;
-   export const SERVICE_ICONS = { ..., "your-service": "cpu" } as const;
    ```
 
-   Icon keys map to Lucide icon names used in `src/components/sections/services.tsx`.
+   Then add the ID to `SERVICE_FAMILY_OFFERS` for the right family (`advisory`, `engineering`, or `managed`).
 
 2. **Add translations** under `pages.serviceDetail.your-service` in both locale files:
    - `metaTitle`, `metaDescription`
@@ -87,6 +88,21 @@ Inner pages use `pages.*` namespaces — see existing keys for `about`, `privacy
 
 1. Add ID to `CLIENT_IDS` and gradient to `CLIENT_GRADIENTS`.
 2. Add `clients.items.{id}` in both locale files.
+
+---
+
+## Consulting launch (internal)
+
+Operational docs — not published on the site:
+
+| File                             | Role                                                    |
+| -------------------------------- | ------------------------------------------------------- |
+| `docs/consulting-launch-plan.md` | Positioning, 3 offers, funnel, first 3 clients          |
+| `docs/launch/sales-kit.md`       | LinkedIn, outreach, discovery script, proposal, billing |
+| `docs/launch/prospects.md`       | 50-name working list                                    |
+| `docs/pricing-internal.md`       | FCFA floors — do not publish                            |
+
+Homepage featured offers (launch doors): `payment-audit`, `add-rail`, `spring-modernization`, `multi-rail`.
 
 ---
 

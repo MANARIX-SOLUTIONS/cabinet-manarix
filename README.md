@@ -1,6 +1,6 @@
 # Manarix Solutions — Landing Site
 
-Marketing website for **Manarix Solutions**, a FinTech & Enterprise Software Engineering firm serving banks, fintechs, startups, and enterprises across Africa.
+Marketing website for **Manarix Solutions**, a FinTech engineering firm helping fintechs, PSPs, aggregators, and digital platforms integrate payments, modernize backends, and build greenfield payment infrastructure across Africa.
 
 **Live URL:** [manarix.com](https://manarix.com) (configure via `NEXT_PUBLIC_SITE_URL`)
 

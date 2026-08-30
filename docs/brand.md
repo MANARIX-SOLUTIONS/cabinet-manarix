@@ -6,20 +6,57 @@ Visual identity for Manarix Solutions on the web.
 
 ## Logo assets
 
-| File                         | Usage                                           |
-| ---------------------------- | ----------------------------------------------- |
-| `public/logo-full.png`       | Full logo on dark background (marketing, decks) |
-| `public/logo-full.svg`       | Vector full lockup (icon + wordmark)            |
-| `src/components/ui/logo.tsx` | Interactive logo in navbar & footer             |
+![Manarix logo sheet](./brand/logo-sheet.png)
+
+| File                              | Usage                                         |
+| --------------------------------- | --------------------------------------------- |
+| `public/logo-mark.svg`            | Icon mark only (favicon source, app icon)     |
+| `public/logo-mark-mono.svg`       | Single-colour mark, inherits `currentColor`   |
+| `public/logo-full.svg`            | Full lockup on light backgrounds              |
+| `public/logo-full-dark.svg`       | Full lockup on dark backgrounds (decks, hero) |
+| `public/logo-full.png`            | Raster lockup on navy (1040×380)              |
+| `public/logo-full-light.png`      | Raster lockup on white (1040×380)             |
+| `public/logo-mark.png`            | Raster mark (512×512)                         |
+| `public/apple-touch-icon.png`     | iOS home screen icon (180×180, full bleed)    |
+| `src/components/ui/logo-mark.tsx` | SVG mark component                            |
+| `src/components/ui/logo.tsx`      | Interactive logo in navbar & footer           |
+| `docs/brand/logo-sheet.svg`       | Brand sheet — lockups, size range, palette    |
+
+### Mark design
+
+- **Monogram:** chiselled solid “M” — two pillars converging on a pointed apex (structure, convergence)
+- **Construction:** 32×32 grid, stems and diagonals both 3.4 units for even optical weight
+- **Ledger rule:** square-capped indigo baseline spanning the exact width of the M (reconciliation, foundation)
+- **Container:** navy `#0B1220`, `rx=7.5` on light surfaces; `rgba(255,255,255,0.06)` tile on dark surfaces
+- **Discipline:** two colours only, flat fills, no gradients, no floating ornament — legible down to 18 px
+
+### Wordmark
+
+- **MANARIX** — Inter Tight 600, letter-spacing `0.055em`, all caps
+- **SOLUTIONS** — Inter Tight 600, letter-spacing `0.26em`, muted, all caps
+- Separated from the mark by a hairline vertical rule
+
+In the exported SVG lockups the wordmark is **converted to outlines**, so the files render
+identically without Inter Tight installed. Regenerate them after any wordmark change:
+
+```bash
+pip install fonttools brotli
+npm run build                  # ensures the Inter Tight subset is on disk
+python3 scripts/build-logo.py  # rewrites public/logo-full{,-dark}.svg
+```
+
+---
 
 ### In-app logo component
 
 ```tsx
 import { Logo } from "@/components/ui/logo";
+import { LogoMark } from "@/components/ui/logo-mark";
 
 <Logo />                          // mark + text
 <Logo showText={false} />         // icon only
 <Logo variant="light" />          // for dark backgrounds
+<LogoMark variant="dark" size={40} />
 ```
 
 Favicon and social preview are generated dynamically:
@@ -37,12 +74,12 @@ Defined as CSS variables in `src/app/globals.css`.
 
 | Token              | Hex       | Usage                     |
 | ------------------ | --------- | ------------------------- |
-| `--brand`          | `#0F172A` | Primary brand / headings  |
-| `--secondary`      | `#2563EB` | Links, CTAs, accents      |
-| `--accent`         | `#059669` | Success, secondary accent |
-| `--background`     | `#F8FAFC` | Page background           |
+| `--brand`          | `#0B1220` | Primary / navy / headings |
+| `--secondary`      | `#1D4ED8` | Links, secondary actions  |
+| `--accent`         | `#0F766E` | Success only              |
+| `--background`     | `#F4F5F7` | Page background           |
 | `--surface`        | `#FFFFFF` | Elevated surfaces         |
-| `--text-primary`   | `#0F172A` | Body text                 |
+| `--text-primary`   | `#0B1220` | Body text                 |
 | `--text-secondary` | `#475569` | Supporting text           |
 | `--text-muted`     | `#64748B` | Captions, labels          |
 
@@ -56,9 +93,9 @@ Defined as CSS variables in `src/app/globals.css`.
 
 ### Gradients
 
-- **Text gradient:** `#2563EB → #3B82F6 → #10B981` (class: `text-gradient`)
-- **Brand icon:** `#0F172A → #1E293B` (class: `brand-icon`)
-- **CTA surface:** soft blue/green wash (light mode)
+- **Hero:** navy editorial canvas (`hero-canvas`), white type, no rainbow headline
+- **Brand icon:** solid navy (`#0B1220`)
+- **CTA / footer:** same navy as the hero — bookend the page
 
 Tailwind theme tokens map via `@theme inline` — use classes like `text-secondary`, `bg-background`, `border-border`.
 
