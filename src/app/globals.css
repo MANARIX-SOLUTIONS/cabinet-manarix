@@ -377,10 +377,8 @@ body {
     #070b14;
 }
 
-.noise-overlay {
-  position: relative;
-}
-
+/* Call sites must position this element themselves (all use `absolute inset-0`).
+   Setting `position` here would beat Tailwind's utilities, which are layered. */
 .noise-overlay::after {
   content: "";
   pointer-events: none;
