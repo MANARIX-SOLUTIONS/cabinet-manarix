@@ -38,9 +38,9 @@ export default async function NotFound() {
           <Link
             href="/"
             className={cn(
-              "mt-8 inline-flex items-center justify-center rounded-2xl",
-              "bg-secondary px-7 py-3.5 text-sm font-semibold text-white",
-              "shadow-subtle transition-all duration-300 hover:bg-[#1d4ed8]",
+              "mt-8 inline-flex items-center justify-center rounded-xl",
+              "bg-primary px-6 py-3.5 text-sm font-medium text-primary-fg shadow-subtle",
+              "transition-colors hover:bg-primary/90",
               "focus-visible:outline-none focus-visible:ring-2",
               "focus-visible:ring-secondary/40 focus-visible:ring-offset-2",
             )}

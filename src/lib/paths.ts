@@ -5,12 +5,20 @@ import {
   type WorkId,
 } from "@/lib/constants";
 
-export const STATIC_PAGE_PATHS = ["/about", "/privacy"] as const;
+export const STATIC_PAGE_PATHS = ["/about", "/privacy", "/legal"] as const;
 
 export type StaticPagePath = (typeof STATIC_PAGE_PATHS)[number];
 
 export function servicePath(slug: (typeof SERVICE_IDS)[number]) {
   return `/services/${slug}` as const;
+}
+
+export function quotePath(offer?: (typeof SERVICE_IDS)[number]) {
+  return offer ? `/?offer=${offer}#contact` : "/#contact";
+}
+
+export function partnerInquiryPath() {
+  return "/?family=partnership#contact";
 }
 
 export function workPath(id: WorkId) {

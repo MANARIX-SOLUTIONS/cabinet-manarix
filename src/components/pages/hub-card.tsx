@@ -7,9 +7,16 @@ interface HubCardProps {
   description: string;
   href: string;
   index?: number;
+  meta?: string;
 }
 
-export function HubCard({ title, description, href, index = 0 }: HubCardProps) {
+export function HubCard({
+  title,
+  description,
+  href,
+  index = 0,
+  meta,
+}: HubCardProps) {
   return (
     <Link
       href={href}
@@ -34,6 +41,9 @@ export function HubCard({ title, description, href, index = 0 }: HubCardProps) {
       <h2 className="font-heading text-xl font-bold tracking-tight text-text-primary">
         {title}
       </h2>
+      {meta ? (
+        <p className="mt-2 text-sm font-semibold text-secondary">{meta}</p>
+      ) : null}
       <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
         {description}
       </p>

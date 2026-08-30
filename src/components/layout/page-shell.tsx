@@ -12,7 +12,7 @@ export function PageShell({ children }: PageShellProps) {
     <>
       <ScrollProgress />
       <Navbar />
-      <main id="main-content" className="min-h-screen pt-28 pb-8">
+      <main id="main-content" className="min-h-screen">
         {children}
       </main>
       <Footer />

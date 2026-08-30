@@ -24,31 +24,29 @@ export function SectionHeader({
       )}
     >
       {eyebrow && (
-        <div
+        <p
           className={cn(
-            "mb-4 flex items-center gap-3",
-            align === "center" && "justify-center",
+            "mb-5 inline-flex items-center gap-2.5 text-[11px] font-medium tracking-[0.2em] text-text-muted uppercase",
+            align === "center" && "mx-auto",
           )}
         >
-          <span className="h-px w-8 bg-gradient-to-r from-secondary/60 to-accent/60" />
-          <p className="text-xs font-semibold tracking-[0.15em] text-secondary uppercase">
-            {eyebrow}
-          </p>
-          {align === "center" && (
-            <span className="h-px w-8 bg-gradient-to-l from-secondary/60 to-accent/60" />
-          )}
-        </div>
+          <span
+            aria-hidden="true"
+            className="h-px w-6 bg-secondary/50"
+          />
+          {eyebrow}
+        </p>
       )}
       <h2
         className={cn(
-          "font-heading text-3xl font-bold tracking-[-0.02em] text-text-primary",
-          "sm:text-4xl lg:text-[2.875rem] lg:leading-[1.12]",
+          "font-heading text-3xl font-semibold tracking-[-0.03em] text-text-primary",
+          "sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]",
         )}
       >
         {title}
       </h2>
       {description && (
-        <p className="mt-5 text-base leading-relaxed text-text-secondary lg:text-lg">
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-text-secondary lg:text-[1.05rem]">
           {description}
         </p>
       )}

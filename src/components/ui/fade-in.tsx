@@ -13,10 +13,10 @@ interface FadeInProps {
 }
 
 const directionOffset = {
-  up: { y: 24, x: 0 },
-  down: { y: -24, x: 0 },
-  left: { x: 24, y: 0 },
-  right: { x: -24, y: 0 },
+  up: { y: 16, x: 0 },
+  down: { y: -16, x: 0 },
+  left: { x: 16, y: 0 },
+  right: { x: -16, y: 0 },
   none: { x: 0, y: 0 },
 };
 

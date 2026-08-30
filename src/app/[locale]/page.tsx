@@ -4,15 +4,18 @@ import { BackToTop } from "@/components/ui/back-to-top";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { Hero } from "@/components/sections/hero";
 import { LogoMarquee } from "@/components/sections/logo-marquee";
-import { Trust } from "@/components/sections/trust";
-import { Services } from "@/components/sections/services";
+import { Problem } from "@/components/sections/problem";
 import { WhyManarix } from "@/components/sections/why-manarix";
-import { Team } from "@/components/sections/team";
-import { Industries } from "@/components/sections/industries";
-import { Process } from "@/components/sections/process";
+import { Services } from "@/components/sections/services";
 import { CaseStudies } from "@/components/sections/case-studies";
-import { TrustedClients } from "@/components/sections/trusted-clients";
-import { Testimonials } from "@/components/sections/testimonials";
+import { ArchitecturePrinciples } from "@/components/sections/architecture-principles";
+import { SectionCta } from "@/components/sections/section-cta";
+import { Process } from "@/components/sections/process";
+import { Credibility } from "@/components/sections/credibility";
+import { RecruiterSection } from "@/components/sections/recruiter-section";
+import { Proofs } from "@/components/sections/proofs";
+import { Transparency } from "@/components/sections/transparency";
+import { Faq } from "@/components/sections/faq";
 import { CTASection } from "@/components/sections/cta-section";
 import { setRequestLocale } from "next-intl/server";
 
@@ -31,15 +34,20 @@ export default async function Home({ params }: Props) {
       <main id="main-content">
         <Hero />
         <LogoMarquee />
-        <Services />
-        <Industries />
+        <Problem />
         <WhyManarix />
-        <Team />
-        <Process />
+        <Services />
+        <SectionCta variant="services" />
         <CaseStudies />
-        <Trust />
-        <TrustedClients />
-        <Testimonials />
+        <SectionCta variant="caseStudies" />
+        <ArchitecturePrinciples />
+        <SectionCta variant="architecture" />
+        <Process />
+        <Credibility />
+        <RecruiterSection />
+        <Proofs hideHeader={false} />
+        <Transparency />
+        <Faq />
         <CTASection />
       </main>
       <Footer />

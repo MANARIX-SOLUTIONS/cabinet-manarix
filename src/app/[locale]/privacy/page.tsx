@@ -52,10 +52,10 @@ export default async function PrivacyPage({ params }: Props) {
               {t("intro")}
             </p>
 
-            <div className="mt-12 space-y-10">
+            <div className="mt-10 space-y-5">
               {PRIVACY_SECTIONS.map((key) => (
-                <div key={key}>
-                  <h2 className="font-heading text-xl font-bold text-text-primary">
+                <div key={key} className="premium-card p-7">
+                  <h2 className="font-heading text-xl font-semibold text-text-primary">
                     {t(`sections.${key}.title`)}
                   </h2>
                   <p className="mt-3 text-base leading-relaxed text-text-secondary">

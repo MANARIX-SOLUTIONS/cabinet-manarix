@@ -1,9 +1,11 @@
 import { cn } from "@/lib/utils";
 
+export type SelectOption = string | { value: string; label: string };
+
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label: string;
   error?: string;
-  options: readonly string[];
+  options: readonly SelectOption[];
   placeholder?: string;
   variant?: "default" | "dark";
 }
@@ -25,6 +27,14 @@ const fieldStyles = {
     "focus:border-secondary/50 focus:bg-white/12 focus:ring-secondary/25",
   ].join(" "),
 } as const;
+
+function optionValue(option: SelectOption) {
+  return typeof option === "string" ? option : option.value;
+}
+
+function optionLabel(option: SelectOption) {
+  return typeof option === "string" ? option : option.label;
+}
 
 export function Select({
   label,
@@ -63,11 +73,14 @@ export function Select({
         {...props}
       >
         <option value="">{placeholder}</option>
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
+        {options.map((option) => {
+          const value = optionValue(option);
+          return (
+            <option key={value} value={value}>
+              {optionLabel(option)}
+            </option>
+          );
+        })}
       </select>
       {error && (
         <p

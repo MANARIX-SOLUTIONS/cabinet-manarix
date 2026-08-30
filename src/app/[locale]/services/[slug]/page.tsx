@@ -6,7 +6,14 @@ import { PageHero } from "@/components/pages/page-hero";
 import { DetailListSection } from "@/components/pages/detail-list-section";
 import { ProcessOverview } from "@/components/pages/process-overview";
 import { DetailCTA } from "@/components/pages/detail-cta";
-import { SERVICE_IDS, type ServiceSlug } from "@/lib/constants";
+import { Container } from "@/components/ui/container";
+import {
+  SERVICE_FAMILY_BY_OFFER,
+  SERVICE_IDS,
+  type ServiceSlug,
+} from "@/lib/constants";
+import { quotePath } from "@/lib/paths";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -27,14 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
-  const t = await getTranslations({
-    locale,
-    namespace: `pages.serviceDetail.${slug}`,
-  });
+  const t = await getTranslations({ locale, namespace: "services" });
 
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
+    title: t(`items.${slug}.title`),
+    description: t(`items.${slug}.description`),
   };
 }
 
@@ -47,12 +51,14 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   setRequestLocale(locale);
 
-  const t = await getTranslations(`pages.serviceDetail.${slug}`);
+  const t = await getTranslations("services");
   const tc = await getTranslations("pages.common");
+  const tcommon = await getTranslations("common");
 
-  const challenges = t.raw("challenges") as string[];
-  const deliverables = t.raw("deliverables") as string[];
-  const technologies = t.raw("technologies") as string[];
+  const deliverables = t.raw(`items.${slug}.features`) as string[];
+  const hasGuarantee = t.has(`items.${slug}.guarantee`);
+  const isEmergency = t.has(`items.${slug}.cta`);
+  const family = SERVICE_FAMILY_BY_OFFER[slug];
 
   return (
     <PageShell>
@@ -60,30 +66,68 @@ export default async function ServiceDetailPage({ params }: Props) {
         breadcrumbs={[
           { label: tc("home"), href: "/" },
           { label: tc("services"), href: "/services" },
-          { label: t("headline") },
+          { label: t(`items.${slug}.title`) },
         ]}
-        title={t("headline")}
-        description={t("subheadline")}
+        title={t(`items.${slug}.title`)}
+        description={t(`items.${slug}.description`)}
       />
 
-      <DetailListSection
-        title={tc("challenges")}
-        items={challenges}
-        className="bg-background"
-      />
+      <section className="border-b border-border/60 bg-surface/60">
+        <Container className="flex flex-wrap items-center gap-3 py-6">
+          <span className="rounded-full border border-border/80 bg-card px-3 py-1 text-[11px] font-medium tracking-[0.14em] text-text-muted uppercase">
+            {t(`families.${family}.title`)}
+          </span>
+          <span className="text-sm text-text-secondary">
+            {t(`items.${slug}.duration`)}
+          </span>
+        </Container>
+      </section>
+
+      <section className="section-padding border-b border-border/60">
+        <Container>
+          <div className="premium-card max-w-3xl p-8">
+            <h2 className="font-heading text-xl font-semibold text-text-primary">
+              {t("audienceLabel")}
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              {t(`items.${slug}.audience`)}
+            </p>
+            {hasGuarantee && (
+              <p className="mt-6 text-sm leading-relaxed text-text-primary">
+                <span className="font-medium">{t("guaranteeLabel")} — </span>
+                {t(`items.${slug}.guarantee`)}
+              </p>
+            )}
+          </div>
+        </Container>
+      </section>
 
       <DetailListSection
         title={tc("deliverables")}
         items={deliverables}
         variant="accent"
-        className="border-y border-border/60 bg-surface/60"
+        className="border-y border-border/60"
       />
 
-      <DetailListSection
-        title={tc("technologies")}
-        items={technologies}
-        className="bg-background"
-      />
+      <section className="section-padding bg-surface">
+        <Container>
+          <div className="premium-card flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-base font-medium text-text-primary">
+              {tcommon("quotePromise")}
+            </p>
+            <Button
+              href={quotePath(slug)}
+              variant="primary"
+              size="lg"
+              showArrow
+            >
+              {isEmergency
+                ? tcommon("contactEmergency")
+                : tcommon("requestQuote")}
+            </Button>
+          </div>
+        </Container>
+      </section>
 
       <ProcessOverview />
 

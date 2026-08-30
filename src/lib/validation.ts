@@ -3,8 +3,25 @@ import type {
   ContactFormState,
   ValidationMessages,
 } from "@/lib/validation-types";
+import {
+  BUDGET_IDS,
+  CONTACT_FAMILY_IDS,
+  TIMELINE_IDS,
+  VOLUME_IDS,
+} from "@/lib/constants";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function isOneOf<T extends string>(value: string, allowed: readonly T[]) {
+  return (allowed as readonly string[]).includes(value);
+}
+
+export function isGuideOnlyInquiry(
+  data: Pick<ContactFormData, "budget" | "timeline" | "family">,
+) {
+  if (data.family === "partnership") return false;
+  return data.budget === "under1m" && data.timeline === "exploratory";
+}
 
 export function validateContactForm(
   data: ContactFormData,
@@ -24,8 +41,20 @@ export function validateContactForm(
     errors.company = messages.company;
   }
 
-  if (!data.service.trim()) {
-    errors.service = messages.service;
+  if (!isOneOf(data.family, CONTACT_FAMILY_IDS)) {
+    errors.family = messages.family;
+  }
+
+  if (!isOneOf(data.volume, VOLUME_IDS)) {
+    errors.volume = messages.volume;
+  }
+
+  if (!isOneOf(data.budget, BUDGET_IDS)) {
+    errors.budget = messages.budget;
+  }
+
+  if (!isOneOf(data.timeline, TIMELINE_IDS)) {
+    errors.timeline = messages.timeline;
   }
 
   if (!data.message.trim() || data.message.trim().length < 20) {

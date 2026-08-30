@@ -20,9 +20,10 @@ const OPTIONS: {
 
 interface ThemeToggleProps {
   className?: string;
+  inverted?: boolean;
 }
 
-export function ThemeToggle({ className }: ThemeToggleProps) {
+export function ThemeToggle({ className, inverted = false }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
   const mounted = useMounted();
   const t = useTranslations("theme");
@@ -31,7 +32,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     return (
       <div
         className={cn(
-          "h-9 w-[108px] rounded-xl border border-border/60 bg-surface",
+          "h-9 w-[108px] rounded-full border border-border/60 bg-surface",
           className,
         )}
         aria-hidden="true"
@@ -46,8 +47,10 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
       role="radiogroup"
       aria-label={t("label")}
       className={cn(
-        "flex items-center gap-0.5 rounded-xl border border-border/60",
-        "bg-surface/80 p-1 backdrop-blur-sm",
+        "flex items-center gap-0.5 rounded-full border p-1",
+        inverted
+          ? "border-white/15 bg-white/5"
+          : "border-border/60 bg-surface/80 backdrop-blur-sm",
         className,
       )}
     >
@@ -60,12 +63,16 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
           aria-label={t(labelKey)}
           onClick={() => setTheme(value)}
           className={cn(
-            "relative flex h-7 w-8 items-center justify-center rounded-lg",
+            "relative flex h-7 w-8 items-center justify-center rounded-full",
             "transition-all duration-300 focus-visible:outline-none",
             "focus-visible:ring-2 focus-visible:ring-secondary/40",
             active === value
-              ? "bg-card text-text-primary shadow-subtle"
-              : "text-text-muted hover:text-text-secondary",
+              ? inverted
+                ? "bg-white text-[#0b1220]"
+                : "bg-card text-text-primary shadow-subtle"
+              : inverted
+                ? "text-white/55 hover:text-white"
+                : "text-text-muted hover:text-text-secondary",
           )}
         >
           <Icon className="h-3.5 w-3.5" strokeWidth={2} />

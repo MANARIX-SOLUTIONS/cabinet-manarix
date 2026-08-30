@@ -47,10 +47,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t("description"),
     alternates: {
-      canonical: locale === "en" ? SITE.url : `${SITE.url}/fr`,
+      canonical: locale === "fr" ? SITE.url : `${SITE.url}/en`,
       languages: {
-        en: SITE.url,
-        fr: `${SITE.url}/fr`,
+        fr: SITE.url,
+        en: `${SITE.url}/en`,
+        "x-default": SITE.url,
       },
     },
     openGraph: {
@@ -59,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       siteName: SITE.name,
-      url: locale === "en" ? SITE.url : `${SITE.url}/fr`,
+      url: locale === "fr" ? SITE.url : `${SITE.url}/en`,
     },
     twitter: {
       card: "summary_large_image",
@@ -72,8 +73,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#060b18" },
+    { media: "(prefers-color-scheme: light)", color: "#0b1220" },
+    { media: "(prefers-color-scheme: dark)", color: "#070b14" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -94,6 +95,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       className={`${inter.variable} ${interTight.variable} h-full scroll-smooth antialiased`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body
@@ -103,7 +105,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange={false}
             storageKey="manarix-theme"

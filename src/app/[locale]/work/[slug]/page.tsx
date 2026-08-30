@@ -1,21 +1,16 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { PageShell } from "@/components/layout/page-shell";
 import { PageHero } from "@/components/pages/page-hero";
 import { DetailCTA } from "@/components/pages/detail-cta";
 import { Container } from "@/components/ui/container";
 import { PlatformMockup } from "@/components/visual/platform-mockup";
-import {
-  CASE_STUDY_TYPES,
-  WORK_ID_BY_SLUG,
-  WORK_SLUG_LIST,
-  type WorkId,
-} from "@/lib/constants";
+import { WORK_ID_BY_SLUG, WORK_SLUG_LIST, type WorkId } from "@/lib/constants";
 import { isValidWorkSlug, servicePath } from "@/lib/paths";
 import { cn } from "@/lib/utils";
+import type { ServiceSlug } from "@/lib/constants";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -58,11 +53,7 @@ export default async function WorkDetailPage({ params }: Props) {
   const ts = await getTranslations("services");
 
   const outcomes = t.raw("outcomes") as string[];
-  const relatedService = t("relatedService") as
-    | "fintech"
-    | "enterprise"
-    | "cloud"
-    | "advisory";
+  const relatedService = t("relatedService") as ServiceSlug;
 
   return (
     <PageShell>
@@ -79,39 +70,33 @@ export default async function WorkDetailPage({ params }: Props) {
       <section className="section-padding border-b border-border/60 bg-background">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="space-y-8">
-              <div>
-                <h2 className="font-heading text-xl font-bold text-text-primary">
+            <div className="grid gap-5">
+              <div className="premium-card p-7">
+                <h2 className="font-heading text-xl font-semibold text-text-primary">
                   {tc("context")}
                 </h2>
                 <p className="mt-3 text-base leading-relaxed text-text-secondary">
                   {t("context")}
                 </p>
               </div>
-              <div>
-                <h2 className="font-heading text-xl font-bold text-text-primary">
+              <div className="premium-card p-7">
+                <h2 className="font-heading text-xl font-semibold text-text-primary">
                   {tc("approach")}
                 </h2>
                 <p className="mt-3 text-base leading-relaxed text-text-secondary">
                   {t("approach")}
                 </p>
               </div>
-              <div>
-                <h2 className="font-heading text-xl font-bold text-text-primary">
+              <div className="premium-card p-7">
+                <h2 className="font-heading text-xl font-semibold text-text-primary">
                   {tc("outcomes")}
                 </h2>
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-4 space-y-2.5">
                   {outcomes.map((outcome) => (
                     <li
                       key={outcome}
-                      className="flex items-start gap-3 text-sm text-text-secondary"
+                      className="text-sm leading-relaxed text-text-secondary before:mr-2 before:text-text-muted before:content-['—']"
                     >
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-accent/10">
-                        <Check
-                          className="h-3 w-3 text-accent"
-                          strokeWidth={2.5}
-                        />
-                      </span>
                       {outcome}
                     </li>
                   ))}
@@ -129,7 +114,7 @@ export default async function WorkDetailPage({ params }: Props) {
             </div>
 
             <div className="premium-card overflow-hidden p-5">
-              <PlatformMockup type={CASE_STUDY_TYPES[workId]} />
+              <PlatformMockup type={workId} />
             </div>
           </div>
         </Container>

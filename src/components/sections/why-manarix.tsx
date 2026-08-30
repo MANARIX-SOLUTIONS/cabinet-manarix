@@ -1,74 +1,51 @@
-import { Layers, Shield, TrendingUp } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
-import { WHY_PILLAR_IDS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-
-const PILLAR_ICONS = {
-  mindset: TrendingUp,
-  expertise: Shield,
-  architecture: Layers,
-} as const;
-
-const PILLAR_GRADIENTS = {
-  mindset: "from-blue-500/10 to-blue-600/5",
-  expertise: "from-emerald-500/10 to-emerald-600/5",
-  architecture: "from-violet-500/10 to-violet-600/5",
-} as const;
+import {
+  PROCESS_STEP_NUMBERS,
+  WHY_MANARIX_COLUMN_IDS,
+} from "@/lib/constants";
 
 export async function WhyManarix() {
-  const t = await getTranslations("why");
+  const t = await getTranslations("whyManarix");
 
   return (
     <section
-      id="about"
-      className="section-padding relative overflow-hidden border-y border-border/60 bg-background dark:bg-surface/50"
+      id="expertise"
+      className="section-padding section-surface relative border-y border-border/60"
     >
-      <div className="pointer-events-none absolute inset-0 dot-grid opacity-30" />
-
-      <Container className="relative">
+      <Container>
         <FadeIn>
           <SectionHeader
             eyebrow={t("eyebrow")}
             title={t("title")}
-            description={t("description")}
-            align="center"
-            className="mx-auto max-w-3xl"
+            className="max-w-3xl"
           />
         </FadeIn>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {WHY_PILLAR_IDS.map((id, index) => {
-            const Icon = PILLAR_ICONS[id];
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          {WHY_MANARIX_COLUMN_IDS.map((id, index) => {
+            const items = t.raw(`columns.${id}.items`) as string[];
+
             return (
-              <FadeIn key={id} delay={index * 0.1}>
-                <div
-                  className={cn(
-                    "group rounded-[16px] border border-border/80 bg-card p-8",
-                    "card-hover text-center md:text-left",
-                  )}
-                >
-                  <div
-                    className={cn(
-                      "mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl md:mx-0",
-                      "border border-border/60 bg-gradient-to-br shadow-subtle",
-                      PILLAR_GRADIENTS[id],
-                    )}
-                  >
-                    <Icon
-                      className="h-6 w-6 text-secondary"
-                      strokeWidth={1.75}
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold tracking-tight text-text-primary">
-                    {t(`pillars.${id}.title`)}
+              <FadeIn key={id} delay={index * 0.06}>
+                <article className="premium-card h-full p-7 lg:p-8">
+                  <p className="index-mark">{PROCESS_STEP_NUMBERS[index]}</p>
+                  <h3 className="mt-5 font-heading text-lg font-semibold text-text-primary">
+                    {t(`columns.${id}.title`)}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-text-secondary">
-                    {t(`pillars.${id}.description`)}
-                  </p>
-                </div>
+                  <ul className="mt-5 space-y-2.5">
+                    {items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-2.5 text-sm leading-relaxed text-text-secondary before:mt-2 before:h-1 before:w-1 before:shrink-0 before:rounded-full before:bg-secondary/70 before:content-['']"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
               </FadeIn>
             );
           })}

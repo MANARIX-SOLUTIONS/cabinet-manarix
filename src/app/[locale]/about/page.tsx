@@ -4,9 +4,8 @@ import { PageShell } from "@/components/layout/page-shell";
 import { PageHero } from "@/components/pages/page-hero";
 import { DetailCTA } from "@/components/pages/detail-cta";
 import { Container } from "@/components/ui/container";
-import { WhyManarix } from "@/components/sections/why-manarix";
 import { Team } from "@/components/sections/team";
-import { Trust } from "@/components/sections/trust";
+import { Transparency } from "@/components/sections/transparency";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,19 +36,19 @@ export default async function AboutPage({ params }: Props) {
         description={t("description")}
       />
 
-      <section className="section-padding border-b border-border/60 bg-background">
+      <section className="section-padding border-b border-border/60">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div className="rounded-card border border-border/80 bg-card p-8">
-              <h2 className="font-heading text-xl font-bold text-text-primary">
+          <div className="grid gap-5 lg:grid-cols-2">
+            <div className="premium-card p-8">
+              <h2 className="font-heading text-xl font-semibold text-text-primary">
                 {t("missionTitle")}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-text-secondary">
                 {t("mission")}
               </p>
             </div>
-            <div className="rounded-card border border-border/80 bg-card p-8">
-              <h2 className="font-heading text-xl font-bold text-text-primary">
+            <div className="premium-card p-8">
+              <h2 className="font-heading text-xl font-semibold text-text-primary">
                 {t("visionTitle")}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-text-secondary">
@@ -60,9 +59,8 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </section>
 
-      <WhyManarix />
       <Team />
-      <Trust />
+      <Transparency />
       <DetailCTA />
     </PageShell>
   );

@@ -1,106 +1,87 @@
-import {
-  Check,
-  Cloud,
-  Compass,
-  CreditCard,
-  Layers,
-  type LucideIcon,
-} from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
-import { SERVICE_ICONS, SERVICE_IDS } from "@/lib/constants";
-import { servicePath } from "@/lib/paths";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { HOME_FEATURED_OFFERS } from "@/lib/constants";
+import { quotePath, servicePath } from "@/lib/paths";
 
-const ICONS: Record<string, LucideIcon> = {
-  "credit-card": CreditCard,
-  layers: Layers,
-  cloud: Cloud,
-  compass: Compass,
-};
+const OFFER_CTA_KEYS = {
+  "payment-audit": "exploreAudit",
+  "add-rail": "exploreSprint",
+  "spring-modernization": "exploreModernization",
+  "multi-rail": "exploreGreenfield",
+} as const;
 
 export async function Services() {
   const t = await getTranslations("services");
-  const tp = await getTranslations("pages.common");
+  const tc = await getTranslations("common");
 
   return (
-    <section id="services" className="section-padding relative section-glow">
+    <section id="offers" className="section-padding relative">
       <Container>
         <FadeIn>
           <SectionHeader
             eyebrow={t("eyebrow")}
             title={t("title")}
             description={t("description")}
+            className="max-w-3xl"
           />
         </FadeIn>
 
-        <div className="mt-16 grid gap-5 md:grid-cols-2">
-          {SERVICE_IDS.map((id, index) => {
-            const iconKey = SERVICE_ICONS[id];
-            const Icon = ICONS[iconKey];
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          {HOME_FEATURED_OFFERS.map((id, index) => {
             const features = t.raw(`items.${id}.features`) as string[];
+            const ctaKey = OFFER_CTA_KEYS[id];
 
             return (
-              <FadeIn key={id} delay={index * 0.08}>
-                <Link
-                  href={servicePath(id)}
-                  className={cn(
-                    "premium-card group block h-full p-8",
-                    "focus-visible:outline-none focus-visible:ring-2",
-                    "focus-visible:ring-secondary/40 focus-visible:ring-offset-2",
-                  )}
-                >
-                  <div className="mb-6 flex items-start justify-between">
-                    <div
-                      className={cn(
-                        "brand-icon flex h-12 w-12 items-center justify-center rounded-2xl",
-                        "shadow-subtle transition-transform duration-300 group-hover:scale-105",
-                      )}
-                    >
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <span className="font-heading text-5xl font-extrabold leading-none text-text-muted/30 transition-colors group-hover:text-secondary/25">
-                      0{index + 1}
-                    </span>
-                  </div>
-                  <h3 className="font-heading text-xl font-bold tracking-tight text-text-primary">
+              <FadeIn key={id} delay={index * 0.06}>
+                <article className="card-accent-top premium-card flex h-full flex-col p-7 lg:p-8">
+                  <p className="index-mark">0{index + 1}</p>
+                  <h3 className="mt-5 font-heading text-xl font-semibold tracking-tight text-text-primary">
                     {t(`items.${id}.title`)}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                     {t(`items.${id}.description`)}
                   </p>
-                  <ul className="mt-7 space-y-3 border-t border-border/80 pt-7">
-                    {features.map((feature) => (
+                  <ul className="mt-6 space-y-2.5">
+                    {features.slice(0, 5).map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-3 text-sm text-text-secondary"
+                        className="text-sm leading-relaxed text-text-secondary before:mr-2 before:text-text-muted before:content-['—']"
                       >
-                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-accent/10">
-                          <Check
-                            className="h-3 w-3 text-accent"
-                            strokeWidth={2.5}
-                          />
-                        </span>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                </Link>
+                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
+                    <Button href={servicePath(id)} variant="primary" size="sm">
+                      {tc(ctaKey)}
+                    </Button>
+                    <Link
+                      href={quotePath(id)}
+                      className="text-sm font-medium text-secondary hover:text-secondary/80"
+                    >
+                      {tc("bookDiscovery")}
+                    </Link>
+                  </div>
+                </article>
               </FadeIn>
             );
           })}
         </div>
 
-        <FadeIn delay={0.3}>
-          <div className="mt-10 text-center">
+        <FadeIn delay={0.2}>
+          <p className="mt-10 text-center text-sm font-medium text-text-primary">
+            {tc("quotePromise")}
+          </p>
+          <div className="mt-4 text-center">
             <Link
               href="/services"
               className="text-sm font-medium text-secondary transition-colors hover:text-secondary/80"
             >
-              {tp("viewAllServices")} →
+              {t("eyebrow")} →
             </Link>
           </div>
         </FadeIn>

@@ -1,81 +1,128 @@
-import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
-import { PlatformMockup } from "@/components/visual/platform-mockup";
-import { CASE_STUDY_IDS, CASE_STUDY_TYPES } from "@/lib/constants";
+import { CASE_STUDY_IDS } from "@/lib/constants";
 import { workPath } from "@/lib/paths";
-import { cn } from "@/lib/utils";
 
 export async function CaseStudies() {
   const t = await getTranslations("caseStudies");
-  const tc = await getTranslations("common");
-  const tp = await getTranslations("pages.common");
+  const tp = await getTranslations("proofs");
 
   return (
-    <section
-      id="capabilities"
-      className="section-padding relative section-glow"
-    >
+    <section id="work" className="section-padding relative">
       <Container>
         <FadeIn>
           <SectionHeader
             eyebrow={t("eyebrow")}
             title={t("title")}
             description={t("description")}
+            className="max-w-3xl"
           />
         </FadeIn>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-3">
-          {CASE_STUDY_IDS.map((id, index) => (
-            <FadeIn key={id} delay={index * 0.08}>
-              <Link
-                href={workPath(id)}
-                className={cn(
-                  "premium-card group flex h-full flex-col overflow-hidden",
-                  "focus-visible:outline-none focus-visible:ring-2",
-                  "focus-visible:ring-secondary/40 focus-visible:ring-offset-2",
-                )}
-              >
-                <div className="border-b border-border/60 bg-surface/80 p-5 transition-colors group-hover:bg-surface">
-                  <PlatformMockup type={CASE_STUDY_TYPES[id]} />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-heading text-lg font-bold tracking-tight text-text-primary">
+        <div className="mt-14 grid gap-5 lg:grid-cols-2">
+          {CASE_STUDY_IDS.map((id, index) => {
+            const technologies = t.raw(`items.${id}.technologies`) as string[];
+
+            return (
+              <FadeIn key={id} delay={index * 0.08}>
+                <article className="card-accent-top premium-card flex h-full flex-col p-7 lg:p-8">
+                  <p className="index-mark">0{index + 1}</p>
+                  <h3 className="mt-5 font-heading text-xl font-semibold tracking-tight text-text-primary">
                     {t(`items.${id}.title`)}
                   </h3>
-                  <p className="mt-2.5 flex-1 text-sm leading-relaxed text-text-secondary">
-                    {t(`items.${id}.description`)}
-                  </p>
-                  <span
-                    className={cn(
-                      "mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-secondary",
-                      "transition-all duration-300",
-                      "opacity-70 group-hover:translate-y-0 group-hover:opacity-100",
-                    )}
-                  >
-                    {tc("viewCapability")}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
-            </FadeIn>
-          ))}
+
+                  <div className="mt-6 space-y-5">
+                    <CaseStudyBlock
+                      label={t("challengeLabel")}
+                      content={t(`items.${id}.challenge`)}
+                    />
+                    <CaseStudyBlock
+                      label={t("approachLabel")}
+                      content={t(`items.${id}.approach`)}
+                    />
+                    <CaseStudyBlock
+                      label={t("outcomeLabel")}
+                      content={t(`items.${id}.outcome`)}
+                      emphasized
+                    />
+                  </div>
+
+                  <div className="mt-auto border-t border-border/60 pt-5">
+                    <p className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
+                      {t("technologiesLabel")}
+                    </p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {technologies.map((tech) => (
+                        <li
+                          key={tech}
+                          className="rounded-full border border-border/70 bg-surface/60 px-3 py-1 text-[11px] font-medium text-text-muted"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              </FadeIn>
+            );
+          })}
         </div>
 
-        <FadeIn delay={0.3}>
-          <div className="mt-10 text-center">
+        <FadeIn delay={0.16}>
+          <article className="card-accent-top premium-card mt-5 flex flex-col gap-4 p-7 sm:flex-row sm:items-center sm:justify-between lg:p-8">
+            <div>
+              <p className="text-[11px] font-medium tracking-[0.16em] text-secondary uppercase">
+                {tp("xaalis.label")}
+              </p>
+              <h3 className="mt-2 font-heading text-lg font-semibold text-text-primary">
+                {tp("xaalis.title")}
+              </h3>
+              <p className="mt-1 max-w-xl text-sm text-text-secondary">
+                {tp("xaalis.subtitle")}
+              </p>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-text-secondary">
+                {tp("xaalis.description")}
+              </p>
+            </div>
             <Link
-              href="/work"
-              className="text-sm font-medium text-secondary transition-colors hover:text-secondary/80"
+              href={workPath("xaalis")}
+              className="shrink-0 text-sm font-medium text-secondary transition-colors hover:text-secondary/80"
             >
-              {tp("viewAllWork")} →
+              {tp("xaalis.cta")} →
             </Link>
-          </div>
+          </article>
         </FadeIn>
       </Container>
     </section>
+  );
+}
+
+function CaseStudyBlock({
+  label,
+  content,
+  emphasized = false,
+}: {
+  label: string;
+  content: string;
+  emphasized?: boolean;
+}) {
+  return (
+    <div>
+      <p className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
+        {label}
+      </p>
+      <p
+        className={
+          emphasized
+            ? "mt-2 text-sm leading-relaxed text-text-primary"
+            : "mt-2 text-sm leading-relaxed text-text-secondary"
+        }
+      >
+        {content}
+      </p>
+    </div>
   );
 }
