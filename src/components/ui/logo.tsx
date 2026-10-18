@@ -7,12 +7,14 @@ interface LogoProps {
   className?: string;
   showText?: boolean;
   variant?: "light" | "dark";
+  href?: "/";
 }
 
 export function Logo({
   className,
   showText = true,
   variant = "dark",
+  href = "/",
 }: LogoProps) {
   const t = useTranslations("footer");
   const tl = useTranslations("logo");
@@ -20,7 +22,7 @@ export function Logo({
 
   return (
     <Link
-      href="/"
+      href={href}
       className={cn("group flex items-center gap-3", className)}
       aria-label={t("homeLabel")}
     >

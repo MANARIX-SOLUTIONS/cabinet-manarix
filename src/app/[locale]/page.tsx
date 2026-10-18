@@ -1,57 +1,44 @@
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { BackToTop } from "@/components/ui/back-to-top";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { Hero } from "@/components/sections/hero";
-import { LogoMarquee } from "@/components/sections/logo-marquee";
-import { Problem } from "@/components/sections/problem";
-import { WhyManarix } from "@/components/sections/why-manarix";
-import { Services } from "@/components/sections/services";
-import { CaseStudies } from "@/components/sections/case-studies";
-import { ArchitecturePrinciples } from "@/components/sections/architecture-principles";
-import { SectionCta } from "@/components/sections/section-cta";
-import { Process } from "@/components/sections/process";
-import { Credibility } from "@/components/sections/credibility";
-import { RecruiterSection } from "@/components/sections/recruiter-section";
-import { Proofs } from "@/components/sections/proofs";
-import { Transparency } from "@/components/sections/transparency";
-import { Faq } from "@/components/sections/faq";
-import { CTASection } from "@/components/sections/cta-section";
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { V2Hero } from "@/components/v2/hero";
+import { V2RailsMarquee } from "@/components/v2/rails-marquee";
+import { V2About } from "@/components/v2/about";
+import { V2Services } from "@/components/v2/services";
+import { V2Method } from "@/components/v2/method";
+import { V2Projects } from "@/components/v2/projects";
+import { V2Domains } from "@/components/v2/domains";
+import { V2Technologies } from "@/components/v2/technologies";
+import { V2Cta } from "@/components/v2/cta";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function Home({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "v2.meta" });
+
+  return {
+    title: { absolute: t("title") },
+    description: t("description"),
+  };
+}
+
+export default async function V2Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   return (
-    <>
-      <ScrollProgress />
-      <Navbar />
-      <main id="main-content">
-        <Hero />
-        <LogoMarquee />
-        <Problem />
-        <WhyManarix />
-        <Services />
-        <SectionCta variant="services" />
-        <CaseStudies />
-        <SectionCta variant="caseStudies" />
-        <ArchitecturePrinciples />
-        <SectionCta variant="architecture" />
-        <Process />
-        <Credibility />
-        <RecruiterSection />
-        <Proofs hideHeader={false} />
-        <Transparency />
-        <Faq />
-        <CTASection />
-      </main>
-      <Footer />
-      <BackToTop />
-    </>
+    <main id="main-content">
+      <V2Hero />
+      <V2RailsMarquee />
+      <V2About />
+      <V2Services />
+      <V2Method />
+      <V2Projects />
+      <V2Domains />
+      <V2Technologies />
+      <V2Cta />
+    </main>
   );
 }

@@ -1,8 +1,7 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/page-shell";
-import { PageHero } from "@/components/pages/page-hero";
-import { Container } from "@/components/ui/container";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { FadeIn } from "@/components/ui/fade-in";
+import { V2PageHero } from "@/components/v2/page-hero";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,16 +26,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PrivacyPage({ params }: Props) {
+export default async function V2PrivacyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations("pages.privacy");
-  const tc = await getTranslations("pages.common");
+  const tc = await getTranslations("v2.pages.common");
 
   return (
-    <PageShell>
-      <PageHero
+    <main id="main-content">
+      <V2PageHero
         breadcrumbs={[
           { label: tc("home"), href: "/" },
           { label: tc("privacy") },
@@ -45,28 +44,27 @@ export default async function PrivacyPage({ params }: Props) {
         description={t("lastUpdated")}
       />
 
-      <section className="section-padding">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <p className="text-base leading-relaxed text-text-secondary">
-              {t("intro")}
-            </p>
-
-            <div className="mt-10 space-y-5">
-              {PRIVACY_SECTIONS.map((key) => (
-                <div key={key} className="premium-card p-7">
-                  <h2 className="font-heading text-xl font-semibold text-text-primary">
+      <section className="v2-section bg-[#F5F7FA]">
+        <div className="v2-container mx-auto max-w-3xl">
+          <FadeIn>
+            <p className="text-base leading-relaxed text-[#4A5568]">{t("intro")}</p>
+          </FadeIn>
+          <div className="mt-10 space-y-5">
+            {PRIVACY_SECTIONS.map((key, index) => (
+              <FadeIn key={key} delay={Math.min(index * 0.04, 0.16)}>
+                <article className="v2-card p-7">
+                  <h2 className="text-xl font-bold text-[#0B1426]">
                     {t(`sections.${key}.title`)}
                   </h2>
-                  <p className="mt-3 text-base leading-relaxed text-text-secondary">
+                  <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                     {t(`sections.${key}.body`)}
                   </p>
-                </div>
-              ))}
-            </div>
+                </article>
+              </FadeIn>
+            ))}
           </div>
-        </Container>
+        </div>
       </section>
-    </PageShell>
+    </main>
   );
 }

@@ -55,6 +55,15 @@ const nextConfig: NextConfig = {
       ...workRedirects.flatMap(([from, to]) =>
         localizedRedirect(`/work/${from}`, to),
       ),
+      ...localizedRedirect("/v2", "/"),
+      ...localizedRedirect("/v2/about", "/about"),
+      ...localizedRedirect("/v2/services", "/services"),
+      ...localizedRedirect("/v2/contact", "/contact"),
+      ...localizedRedirect("/v2/legal", "/legal"),
+      ...localizedRedirect("/v2/privacy", "/privacy"),
+      ...localizedRedirect("/v2/work", "/work"),
+      ...localizedRedirect("/v2/services/:slug", "/services/:slug"),
+      ...localizedRedirect("/v2/work/:slug", "/work/:slug"),
     ];
   },
 };

@@ -1,8 +1,7 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/page-shell";
-import { PageHero } from "@/components/pages/page-hero";
-import { Container } from "@/components/ui/container";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { FadeIn } from "@/components/ui/fade-in";
+import { V2PageHero } from "@/components/v2/page-hero";
 import { SITE } from "@/lib/site";
 
 type Props = {
@@ -19,54 +18,59 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function LegalPage({ params }: Props) {
+export default async function V2LegalPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations("pages.legal");
-  const tc = await getTranslations("pages.common");
+  const tc = await getTranslations("v2.pages.common");
   const hasIdentifiers = Boolean(
     SITE.legal.form || SITE.legal.ninea || SITE.legal.rccm,
   );
 
   return (
-    <PageShell>
-      <PageHero
-        breadcrumbs={[{ label: tc("home"), href: "/" }, { label: tc("legal") }]}
+    <main id="main-content">
+      <V2PageHero
+        breadcrumbs={[
+          { label: tc("home"), href: "/" },
+          { label: tc("legal") },
+        ]}
         title={t("title")}
         description={t("intro")}
       />
 
-      <section className="section-padding">
-        <Container>
-          <div className="mx-auto max-w-3xl space-y-5">
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+      <section className="v2-section bg-[#F5F7FA]">
+        <div className="v2-container mx-auto max-w-3xl space-y-5">
+          <FadeIn>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("publisherTitle")}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                 {t("publisherBody")}
               </p>
-            </div>
-
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.04}>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("directorTitle")}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                 {t("directorBody")}
               </p>
-            </div>
-
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.08}>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("identifiersTitle")}
               </h2>
               {hasIdentifiers ? (
-                <dl className="mt-3 space-y-2 text-base text-text-secondary">
+                <dl className="mt-3 space-y-2 text-base text-[#4A5568]">
                   {SITE.legal.form ? (
                     <div>
-                      <dt className="inline font-medium text-text-primary">
+                      <dt className="inline font-semibold text-[#0B1426]">
                         {t("formLabel")} :{" "}
                       </dt>
                       <dd className="inline">{SITE.legal.form}</dd>
@@ -74,7 +78,7 @@ export default async function LegalPage({ params }: Props) {
                   ) : null}
                   {SITE.legal.ninea ? (
                     <div>
-                      <dt className="inline font-medium text-text-primary">
+                      <dt className="inline font-semibold text-[#0B1426]">
                         {t("nineaLabel")} :{" "}
                       </dt>
                       <dd className="inline">{SITE.legal.ninea}</dd>
@@ -82,7 +86,7 @@ export default async function LegalPage({ params }: Props) {
                   ) : null}
                   {SITE.legal.rccm ? (
                     <div>
-                      <dt className="inline font-medium text-text-primary">
+                      <dt className="inline font-semibold text-[#0B1426]">
                         {t("rccmLabel")} :{" "}
                       </dt>
                       <dd className="inline">{SITE.legal.rccm}</dd>
@@ -90,41 +94,44 @@ export default async function LegalPage({ params }: Props) {
                   ) : null}
                 </dl>
               ) : (
-                <p className="mt-3 text-base leading-relaxed text-text-secondary">
+                <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                   {t("identifiersPending")}
                 </p>
               )}
-            </div>
-
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.12}>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("addressTitle")}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                 {SITE.legal.address}
               </p>
-            </div>
-
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.16}>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("hostingTitle")}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                 {t("hostingBody")}
               </p>
-            </div>
-
-            <div className="premium-card p-7">
-              <h2 className="font-heading text-xl font-semibold text-text-primary">
+            </article>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <article className="v2-card p-7">
+              <h2 className="text-xl font-bold text-[#0B1426]">
                 {t("contactTitle")}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-text-secondary">
+              <p className="mt-3 text-base leading-relaxed text-[#4A5568]">
                 {t("contactBody", { email: SITE.email })}
               </p>
-            </div>
-          </div>
-        </Container>
+            </article>
+          </FadeIn>
+        </div>
       </section>
-    </PageShell>
+    </main>
   );
 }

@@ -6,8 +6,9 @@ interface JsonLdProps {
 }
 
 export async function JsonLd({ locale }: JsonLdProps) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: "v2.meta" });
   const seo = await getTranslations({ locale, namespace: "seo" });
+  const tm = await getTranslations({ locale, namespace: "metadata" });
 
   const serviceTypes = seo.raw("serviceTypes") as string[];
 
@@ -18,7 +19,7 @@ export async function JsonLd({ locale }: JsonLdProps) {
     description: t("description"),
     url: locale === "fr" ? SITE.url : `${SITE.url}/en`,
     email: SITE.email,
-    slogan: t("tagline"),
+    slogan: tm("tagline"),
     inLanguage: locale === "fr" ? "fr" : "en",
     address: {
       "@type": "PostalAddress",

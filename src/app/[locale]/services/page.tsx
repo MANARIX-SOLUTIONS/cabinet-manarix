@@ -1,18 +1,16 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { PageShell } from "@/components/layout/page-shell";
-import { PageHero } from "@/components/pages/page-hero";
-import { DetailCTA } from "@/components/pages/detail-cta";
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
+import { FadeIn } from "@/components/ui/fade-in";
+import { V2Cta } from "@/components/v2/cta";
+import { V2PageHero } from "@/components/v2/page-hero";
 import {
   OUT_OF_SCOPE_IDS,
   SERVICE_FAMILY_IDS,
   SERVICE_FAMILY_OFFERS,
   type ServiceSlug,
 } from "@/lib/constants";
-import { quotePath, servicePath } from "@/lib/paths";
+import { v2ContactPath, v2ServicePath } from "@/lib/v2";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,7 +18,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "pages.servicesHub" });
+  const t = await getTranslations({ locale, namespace: "v2.pages.services" });
 
   return {
     title: t("metaTitle"),
@@ -28,126 +26,119 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ServicesHubPage({ params }: Props) {
+export default async function V2ServicesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("pages.servicesHub");
-  const tc = await getTranslations("pages.common");
+  const t = await getTranslations("v2.pages.services");
+  const tc = await getTranslations("v2.pages.common");
   const ts = await getTranslations("services");
   const tcommon = await getTranslations("common");
 
   return (
-    <PageShell>
-      <PageHero
+    <main id="main-content">
+      <V2PageHero
         breadcrumbs={[
           { label: tc("home"), href: "/" },
           { label: tc("services") },
         ]}
+        eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("description")}
       />
 
-      {SERVICE_FAMILY_IDS.map((family) => (
+      {SERVICE_FAMILY_IDS.map((family, familyIndex) => (
         <section
           key={family}
           id={family}
-          className="section-padding border-b border-border/60"
+          className={familyIndex % 2 === 0 ? "v2-section bg-white" : "v2-section bg-[#F5F7FA]"}
         >
-          <Container>
-            <p className="inline-flex items-center gap-2.5 text-[11px] font-medium tracking-[0.2em] text-text-muted uppercase">
-              <span aria-hidden="true" className="h-px w-6 bg-secondary/50" />
-              {ts(`families.${family}.title`)}
-            </p>
-            <h2 className="mt-3 font-heading text-2xl font-semibold text-text-primary sm:text-3xl">
-              {ts(`families.${family}.tagline`)}
-            </h2>
-
-            <div className="mt-10 grid gap-5 lg:grid-cols-2">
-              {SERVICE_FAMILY_OFFERS[family].map((id) => {
+          <div className="v2-container">
+            <FadeIn>
+              <p className="v2-eyebrow">{ts(`families.${family}.title`)}</p>
+              <h2 className="v2-h2">{ts(`families.${family}.tagline`)}</h2>
+            </FadeIn>
+            <div className="mt-12 grid gap-5 [grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))]">
+              {SERVICE_FAMILY_OFFERS[family].map((id, index) => {
                 const offer = id as ServiceSlug;
                 const features = ts.raw(`items.${offer}.features`) as string[];
                 const isEmergency = ts.has(`items.${offer}.cta`);
-                const hasGuarantee = ts.has(`items.${offer}.guarantee`);
 
                 return (
-                  <article
-                    key={offer}
-                    className="premium-card flex h-full flex-col p-7"
-                  >
-                    <h3 className="font-heading text-xl font-semibold text-text-primary">
-                      {ts(`items.${offer}.title`)}
-                    </h3>
-                    <p className="mt-2 text-sm text-text-muted">
-                      {ts(`items.${offer}.duration`)}
-                    </p>
-                    <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                      {ts(`items.${offer}.description`)}
-                    </p>
-                    <ul className="mt-5 flex-1 space-y-2">
-                      {features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="text-sm leading-relaxed text-text-secondary before:mr-2 before:text-text-muted before:content-['—']"
-                        >
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    {hasGuarantee && (
-                      <p className="mt-5 text-sm leading-relaxed text-text-primary">
-                        <span className="font-medium">
-                          {ts("guaranteeLabel")} —{" "}
-                        </span>
-                        {ts(`items.${offer}.guarantee`)}
+                  <FadeIn key={offer} delay={Math.min(index * 0.04, 0.16)}>
+                    <article className="v2-card flex h-full flex-col p-7">
+                      <h3 className="text-[21px] font-bold tracking-[-0.015em] text-[#0B1426]">
+                        {ts(`items.${offer}.title`)}
+                      </h3>
+                      <p className="mt-2 text-[12.5px] font-bold tracking-[0.12em] text-[color:var(--v2-accent)] uppercase">
+                        {ts(`items.${offer}.duration`)}
                       </p>
-                    )}
-                    <div className="mt-6 flex flex-wrap items-center gap-3">
-                      <Button
-                        href={quotePath(offer)}
-                        variant={isEmergency ? "primary" : "outline"}
-                        size="sm"
-                      >
-                        {isEmergency
-                          ? tcommon("contactEmergency")
-                          : tcommon("requestQuote")}
-                      </Button>
-                      <Link
-                        href={servicePath(offer)}
-                        className="text-sm font-medium text-secondary hover:text-secondary/80"
-                      >
-                        {tc("deliverables")} →
-                      </Link>
-                    </div>
-                  </article>
+                      <p className="mt-3 text-[15px] leading-[1.65] text-[#4A5568]">
+                        {ts(`items.${offer}.description`)}
+                      </p>
+                      <ul className="mt-5 flex-1 space-y-2">
+                        {features.slice(0, 3).map((feature) => (
+                          <li
+                            key={feature}
+                            className="flex items-start gap-2.5 text-[14.5px] leading-[1.5] text-[#1E2A3F]"
+                          >
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--v2-accent)]" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-6 flex flex-wrap items-center gap-4">
+                        <Link
+                          href={v2ContactPath(offer)}
+                          className="v2-btn-accent !px-4 !py-2.5 text-sm"
+                        >
+                          {isEmergency
+                            ? tcommon("contactEmergency")
+                            : tcommon("requestQuote")}
+                        </Link>
+                        <Link
+                          href={v2ServicePath(offer)}
+                          className="v2-text-link"
+                        >
+                          {tc("deliverables")}
+                        </Link>
+                      </div>
+                    </article>
+                  </FadeIn>
                 );
               })}
             </div>
-          </Container>
+          </div>
         </section>
       ))}
 
-      <section className="section-padding">
-        <Container>
-          <div className="premium-card p-8">
-            <h2 className="font-heading text-2xl font-semibold text-text-primary">
-              {ts("outOfScope.title")}
-            </h2>
-            <p className="mt-3 text-sm text-text-secondary">
-              {ts("outOfScope.intro")}
-            </p>
-            <ul className="mt-5 grid gap-2 sm:grid-cols-2">
-              {OUT_OF_SCOPE_IDS.map((id) => (
-                <li key={id} className="text-sm text-text-secondary">
-                  — {ts(`outOfScope.items.${id}`)}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Container>
+      <section className="v2-section bg-white">
+        <div className="v2-container">
+          <FadeIn>
+            <article className="v2-card p-8">
+              <h2 className="text-[28px] font-extrabold tracking-[-0.025em] text-[#0B1426]">
+                {ts("outOfScope.title")}
+              </h2>
+              <p className="mt-3 text-[15px] leading-[1.65] text-[#4A5568]">
+                {ts("outOfScope.intro")}
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {OUT_OF_SCOPE_IDS.map((id) => (
+                  <li
+                    key={id}
+                    className="flex items-start gap-2.5 text-[15px] text-[#1E2A3F]"
+                  >
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7A8599]" />
+                    {ts(`outOfScope.items.${id}`)}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </FadeIn>
+        </div>
       </section>
 
-      <DetailCTA />
-    </PageShell>
+      <V2Cta />
+    </main>
   );
 }

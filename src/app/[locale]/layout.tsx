@@ -7,21 +7,22 @@ import {
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import type { Metadata, Viewport } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { JsonLd } from "@/components/seo/json-ld";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+import { V2Footer } from "@/components/v2/footer";
+import { V2Navbar } from "@/components/v2/navbar";
 import { routing } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 import "../globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-v2-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const interTight = Inter_Tight({
-  variable: "--font-inter-tight",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-v2-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -37,7 +38,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: "v2.meta" });
 
   return {
     metadataBase: new URL(SITE.url),
@@ -65,17 +66,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: SITE.name,
-      description: t("tagline"),
+      description: t("description"),
     },
     manifest: "/manifest.json",
   };
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0b1220" },
-    { media: "(prefers-color-scheme: dark)", color: "#070b14" },
-  ],
+  themeColor: "#0B1426",
   width: "device-width",
   initialScale: 1,
 };
@@ -94,31 +92,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${interTight.variable} h-full scroll-smooth antialiased`}
+      className={`${plusJakarta.variable} ${jetbrainsMono.variable} h-full scroll-smooth antialiased`}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body
-        className="min-h-full bg-background font-sans text-text-primary transition-colors duration-300"
-        suppressHydrationWarning
-      >
+      <body className="v2-root min-h-full" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange={false}
-            storageKey="manarix-theme"
+          <JsonLd locale={locale} />
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-[#2F6BFF] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
           >
-            <JsonLd locale={locale} />
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-xl focus:bg-secondary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
-            >
-              {t("skipToContent")}
-            </a>
-            {children}
-          </ThemeProvider>
+            {t("skipToContent")}
+          </a>
+          <V2Navbar />
+          {children}
+          <V2Footer />
         </NextIntlClientProvider>
       </body>
     </html>

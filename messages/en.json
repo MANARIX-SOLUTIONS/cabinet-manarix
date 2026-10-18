@@ -282,11 +282,7 @@
         "description": "Before production: load testing, operator-outage scenarios, recovery plan, go-live checklist.",
         "duration": "5 working days",
         "audience": "Fintechs and platforms about to launch.",
-        "features": [
-          "Load-holding report",
-          "Cutover plan",
-          "Blockers"
-        ]
+        "features": ["Load-holding report", "Cutover plan", "Blockers"]
       },
       "multi-rail": {
         "title": "Multi-rail payment integration",
@@ -959,6 +955,380 @@
   "logo": {
     "manarix": "Manarix",
     "solutions": "Solutions"
+  },
+  "v2": {
+    "meta": {
+      "title": "Manarix Solutions | FinTech engineering and payment infrastructure",
+      "description": "The rigour of an international firm, the proximity of a Dakar partner. Payments, backends and greenfield platforms."
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact",
+      "cta": "contact us",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "mainNav": "Main navigation"
+    },
+    "hero": {
+      "eyebrow": "FinTech Engineering & Consulting · Dakar",
+      "headline": "IT solutions grounded in the realities of the market.",
+      "subheadline": "The rigour and standards of a major international firm — with the responsiveness, proximity and pricing of a local partner.",
+      "ctaPrimary": "explore our projects",
+      "ctaSecondary": "about us",
+      "stat1Value": "45",
+      "stat1Suffix": "min",
+      "stat1Label": "technical discovery",
+      "stat2Value": "48",
+      "stat2Suffix": "h",
+      "stat2Label": "written proposal",
+      "stat3Value": "6",
+      "stat3Suffix": "+",
+      "stat3Label": "years of engineering",
+      "orbitPayments": "payments",
+      "orbitLedger": "ledger",
+      "orbitRails": "rails"
+    },
+    "rails": {
+      "label": "They trust us",
+      "disclaimer": "Payment rails and platforms we integrate — not a client list."
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Agile IT, by experts, for ambitious companies",
+      "p1": "We start from your business challenges, not from technology. Every engagement begins with a precise diagnosis of your processes, constraints and goals, to identify where IT truly creates value.",
+      "p2": "We then design the architecture and deliver what should be built, with teams who know the Senegalese and West African landscape and apply the standards of leading international firms.",
+      "ctaPrimary": "discuss your project →",
+      "ctaSecondary": "explore our services →",
+      "photoLabel": "photo — team in a client workshop",
+      "step1": "Diagnose",
+      "step2": "Design",
+      "step3": "Deliver"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Complete expertise, from consulting to delivery",
+      "description": "Two complementary offers covering the full lifecycle of your projects, from strategy to operations.",
+      "offer1Eyebrow": "Offer 01",
+      "offer1Title": "IT Engineering",
+      "offer1Lead": "Designing, building and securing the systems that run your business.",
+      "offer1Body": "From payment orchestration to cloud deployment, our engineers deliver robust, documented and maintainable solutions built to grow with your organisation.",
+      "offer1Tags": [
+        "Payment integration",
+        "Orchestration",
+        "Ledger",
+        "Cloud computing",
+        "Software development",
+        "IT security"
+      ],
+      "offer2Eyebrow": "Offer 02",
+      "offer2Title": "IT Consulting",
+      "offer2Lead": "Aligning your technology choices with your business strategy.",
+      "offer2Body": "We help you prioritise, structure and steer your IT investments: roadmap, architecture choices, application integration and day-to-day support.",
+      "offer2Tags": [
+        "Payment audit",
+        "Architecture",
+        "IT strategy",
+        "Security",
+        "Go-live",
+        "Due diligence"
+      ]
+    },
+    "method": {
+      "eyebrow": "How we work",
+      "title": "Short cycles, continuous collaboration, and an obsession with results.",
+      "description": "Our method combines the agility of product teams with the rigour of consulting. You see concrete progress every two weeks, and every decision is made with you, based on real data.",
+      "cta": "let's talk about your project",
+      "items": [
+        {
+          "kicker": "Short cycles",
+          "title": "Iterative approach",
+          "body": "Frequent, measurable releases to validate each step before going further."
+        },
+        {
+          "kicker": "Design",
+          "title": "Tailored solutions",
+          "body": "Every solution is built around your processes, your users and your constraints."
+        },
+        {
+          "kicker": "Proximity",
+          "title": "Field expertise",
+          "body": "Dakar-based teams who understand the realities of the local and regional market."
+        },
+        {
+          "kicker": "Long term",
+          "title": "Strategic support",
+          "body": "Ongoing follow-up after go-live: training, support and evolutions."
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Key achievements",
+      "description": "A selection of representative engagements — anonymised where client confidentiality requires it.",
+      "seeAll": "see all projects",
+      "view": "view project →",
+      "photo1": "mockup — payment orchestration",
+      "photo2": "mockup — greenfield platform",
+      "photo3": "mockup — backend modernization",
+      "items": [
+        {
+          "sector": "FinTech · Payments",
+          "title": "Payment integration platform",
+          "body": "A unified integration layer: idempotency, webhooks, retries and state management across providers with inconsistent APIs."
+        },
+        {
+          "sector": "Marketplace · Collection",
+          "title": "Greenfield payment platform",
+          "body": "Orchestration, ledger and integration designed from scratch — observability and idempotency from day one."
+        },
+        {
+          "sector": "Enterprise · Backend",
+          "title": "Production backend modernization",
+          "body": "A progressive stack upgrade without a big bang: APIs, events and observability, while keeping production running."
+        }
+      ]
+    },
+    "domains": {
+      "eyebrow": "Expertise",
+      "title": "Our areas of expertise",
+      "description": "Six fields where we combine technical expertise with sector knowledge.",
+      "items": [
+        {
+          "title": "Payments & Mobile Money",
+          "desc": "Reliable rails, from request to settlement.",
+          "points": [
+            "PSP and mobile money integration",
+            "Webhooks, retries and idempotency",
+            "Multi-rail orchestration",
+            "Reconciliation and settlement"
+          ]
+        },
+        {
+          "title": "APIs & Integration",
+          "desc": "API contracts that hold up in production.",
+          "points": [
+            "Contracts, timeouts and retries",
+            "OAuth2 / JWT authentication",
+            "Partner integration",
+            "Versioning and observability"
+          ]
+        },
+        {
+          "title": "Architecture",
+          "desc": "Systems designed to last and evolve.",
+          "points": [
+            "C4 model and ADRs",
+            "Progressive migration",
+            "Events and consistency",
+            "Technical roadmap"
+          ]
+        },
+        {
+          "title": "Cloud & Infrastructure",
+          "desc": "Solid foundations, operable day to day.",
+          "points": [
+            "Deployment and high availability",
+            "Containers and orchestration",
+            "Recovery and capacity",
+            "Pragmatic FinOps"
+          ]
+        },
+        {
+          "title": "Cybersecurity",
+          "desc": "Protecting your data, systems and reputation.",
+          "points": [
+            "OAuth2, JWT and RBAC review",
+            "Webhook hardening",
+            "Policies and compliance",
+            "API attack surface"
+          ]
+        },
+        {
+          "title": "Observability & Performance",
+          "desc": "Know what is happening before the customer does.",
+          "points": [
+            "Logs, metrics and traces",
+            "Actionable alerts",
+            "Latency and throughput",
+            "Production runbooks"
+          ]
+        }
+      ]
+    },
+    "tech": {
+      "eyebrow": "Technologies",
+      "title": "Technologies we master",
+      "description": "A proven technical foundation, chosen for its reliability and longevity.",
+      "seeAll": "see the full list →",
+      "expand": "Show",
+      "collapse": "Hide",
+      "columns": [
+        {
+          "title": "Backend",
+          "items": [
+            "Java / Spring",
+            "Node.js",
+            "PostgreSQL",
+            "Redis",
+            "Kafka",
+            "REST APIs"
+          ]
+        },
+        {
+          "title": "DevOps & Cloud",
+          "items": [
+            "AWS",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
+            "GitHub Actions",
+            "Linux"
+          ]
+        },
+        {
+          "title": "Payments",
+          "items": [
+            "Wave",
+            "Orange Money",
+            "Stripe",
+            "Webhooks",
+            "PI-SPI",
+            "Card networks"
+          ]
+        },
+        {
+          "title": "Tools & Methods",
+          "items": [
+            "OpenTelemetry",
+            "C4 / ADR",
+            "Scrum",
+            "Git",
+            "Jira",
+            "Figma"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to build your next project?",
+      "description": "We analyse your needs and propose a tailored approach.",
+      "button": "start a project",
+      "kicker": "Solutions"
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "location": "Dakar, Senegal",
+      "navLabel": "Pages",
+      "legal": "Legal notice",
+      "privacy": "Privacy"
+    },
+    "pages": {
+      "common": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "work": "Projects",
+        "contact": "Contact",
+        "legal": "Legal notice",
+        "privacy": "Privacy policy",
+        "deliverables": "Deliverables",
+        "audience": "Who it's for",
+        "context": "Context",
+        "approach": "Approach",
+        "outcomes": "What it demonstrates",
+        "relatedService": "Related offer",
+        "stack": "Stack",
+        "ctaButton": "start a project"
+      },
+      "about": {
+        "metaTitle": "About",
+        "metaDescription": "An engineering firm in Dakar: payments, backends and greenfield platforms. The rigour of an international firm, the proximity of a local partner.",
+        "eyebrow": "About",
+        "title": "An engineering firm rooted in Dakar",
+        "description": "We help fintechs, PSPs and digital platforms build reliable payment infrastructure — with teams who know the West African landscape."
+      },
+      "services": {
+        "metaTitle": "Services",
+        "metaDescription": "IT advisory, engineering and support: payment integration, backend modernization and greenfield platforms.",
+        "eyebrow": "Services",
+        "title": "From diagnosis to production",
+        "description": "Three entry points: audit, build, or operate. Every engagement starts with a 45-minute technical diagnosis and a written proposal within 48 hours."
+      },
+      "work": {
+        "metaTitle": "Projects",
+        "metaDescription": "Representative engagements — anonymised where client confidentiality requires it.",
+        "eyebrow": "Projects",
+        "title": "Key achievements",
+        "description": "A selection of representative engagements. Details are anonymised where client confidentiality requires it."
+      },
+      "contact": {
+        "metaTitle": "Contact",
+        "metaDescription": "A 45-minute technical diagnosis and a written proposal within 48 hours. Tell us about your payment architecture.",
+        "eyebrow": "Contact",
+        "title": "Let's talk about your next project",
+        "description": "Describe the need. We come back with a diagnosis and a written proposal — or we will tell you if it is not for us.",
+        "infoEyebrow": "Get started",
+        "infoTitle": "One conversation, a clear proposal",
+        "infoBody": "No generic sales form. We read the technical context before proposing a scope.",
+        "emailLabel": "Email",
+        "locationLabel": "Office",
+        "responseLabel": "Turnaround",
+        "responseValue": "45 min · 48 h"
+      },
+      "workDetail": {
+        "payment-integration": {
+          "metaTitle": "Payment integration platform",
+          "metaDescription": "A unified integration layer: idempotency, webhooks, retries and state management across providers.",
+          "headline": "Payment integration platform",
+          "subheadline": "One layer to orchestrate providers with inconsistent APIs and transaction states.",
+          "sector": "FinTech · Payments",
+          "context": "The client collected through several providers whose API contracts, webhooks and transaction statuses were not aligned. Each new rail added debt and incidents that were hard to explain to the business.",
+          "approach": "We put a single integration layer in place: idempotency, retries, webhook normalisation and a shared state model. Providers become adapters, not the core of the system.",
+          "outcomes": [
+            "A single integration contract for product teams",
+            "Retries and idempotency across every rail",
+            "Operational visibility of in-flight payments",
+            "A new provider can be added without rewriting the business"
+          ],
+          "stack": ["Kafka", "PostgreSQL", "REST APIs", "Docker"]
+        },
+        "greenfield-platform": {
+          "metaTitle": "Greenfield payment platform",
+          "metaDescription": "Orchestration, ledger and integration designed from scratch for a marketplace.",
+          "headline": "Greenfield payment platform",
+          "subheadline": "Orchestration, ledger and integration designed from scratch — observability and idempotency from day one.",
+          "sector": "Marketplace · Collection",
+          "context": "A marketplace needed to collect across several rails with no existing payment infrastructure. The job was not to assemble SDKs: it needed a system that could hold settlement, reconciliation and scale.",
+          "approach": "We designed orchestration, ledger and integration as one product. Idempotency, webhooks and observability were not bolted on later: they were in the first increment shipped.",
+          "outcomes": [
+            "A production-ready payment stack, delivered incrementally",
+            "Ledger and orchestration aligned from the start",
+            "Actionable observability before go-live",
+            "A scalable base for adding rails without a big bang"
+          ],
+          "stack": ["Kafka", "PostgreSQL", "REST APIs", "Kubernetes"]
+        },
+        "backend-modernization": {
+          "metaTitle": "Production backend modernization",
+          "metaDescription": "A progressive stack upgrade without a big bang: APIs, events and observability, while keeping the existing system in service.",
+          "headline": "Production backend modernization",
+          "subheadline": "A progressive stack upgrade, without cutting service or rewriting what still holds.",
+          "sector": "Enterprise · Backend",
+          "context": "The production backend still ran the business but blocked change: fragile APIs, little observability, and a justified fear of a big bang. It had to be modernised without interrupting collection.",
+          "approach": "We isolated the seams, introduced APIs and events at the edges, then shifted traffic progressively. Each step had a rollback criterion and measurable observability.",
+          "outcomes": [
+            "Service kept running throughout the migration",
+            "APIs and events in place on the critical path",
+            "Enough observability to operate without guesswork",
+            "A technical roadmap the internal team can continue"
+          ],
+          "stack": ["Java / Spring", "PostgreSQL", "Kafka", "OpenTelemetry"]
+        }
+      }
+    }
   },
   "notFound": {
     "title": "Page not found",

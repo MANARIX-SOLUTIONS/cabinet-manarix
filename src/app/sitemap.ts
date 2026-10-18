@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SERVICE_IDS, WORK_SLUG_LIST } from "@/lib/constants";
-import { STATIC_PAGE_PATHS } from "@/lib/paths";
+import { V2_SITEMAP_PATHS } from "@/lib/v2";
 import { routing } from "@/i18n/routing";
 import { SITE } from "@/lib/site";
 
@@ -24,19 +23,10 @@ function buildAlternates(path: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = [
-    "/",
-    ...STATIC_PAGE_PATHS,
-    "/services",
-    ...SERVICE_IDS.map((id) => `/services/${id}`),
-    "/work",
-    ...WORK_SLUG_LIST.map((slug) => `/work/${slug}`),
-  ];
-
   const now = new Date();
 
   return routing.locales.flatMap((locale) =>
-    paths.map((path) => ({
+    V2_SITEMAP_PATHS.map((path) => ({
       url: buildLocalizedUrl(path, locale),
       lastModified: now,
       changeFrequency: "monthly" as const,
